@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "landscape-material-calculator/calculator",
+	"version": "0.1.0",
+	"title": "Material Calculator",
+	"category": "widgets",
+	"icon": "calculator",
+	"description": "Lets visitors work out how much mulch, soil, gravel, sand, or concrete they need, priced with your rates.",
+	"keywords": [ "mulch", "gravel", "concrete", "cubic yard", "calculator" ],
+	"textdomain": "landscape-material-calculator",
+	"attributes": {
+		"material": { "type": "string", "default": "all" }
+	},
+	"supports": { "html": false, "align": [ "wide" ], "spacing": { "margin": true, "padding": true } },
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Landscape Material Calculator demo",
+    "description": "A demo supply-yard page with example prices, a rounding step, a minimum order, and a quote button.",
+    "author": "jessepy"
+  },
+  "landingPage": "/material-calculator/",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "features": {
+    "networking": false
+  },
+  "steps": [
+    {
+      "step": "login"
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://jesse-py.github.io/landscape-material-calculator/landscape-material-calculator-0.1.0.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "Example Supply Yard",
+        "permalink_structure": "/%postname%/"
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nrequire '/wordpress/wp-load.php';\n$o = lmcalc_get_settings();\n$o['materials']['gravel']['label'] = '#57 crushed stone';\n$o['materials']['gravel']['price'] = 38;\n$o['materials']['gravel']['step'] = 0.5;\n$o['materials']['gravel']['min'] = 1;\n$o['materials']['mulch']['label'] = 'Double-shredded hardwood mulch';\n$o['materials']['mulch']['price'] = 34;\n$o['materials']['topsoil']['price'] = 30;\n$o['materials']['concrete']['price'] = 165;\n$o['quote_url'] = home_url('/contact/');\nupdate_option('lmcalc_settings', $o);\n$intro = '<!-- wp:paragraph --><p>This is a demo of the Landscape Material Calculator plugin. The prices, the half-ton rounding on gravel, and the 1-ton minimum are examples. Change them in the dashboard under Settings, then Material Calculator, and reload this page.</p><!-- /wp:paragraph -->';\nwp_insert_post(array('post_type' => 'page', 'post_status' => 'publish', 'post_name' => 'material-calculator', 'post_title' => 'Material calculator', 'post_content' => $intro . \"\\n[landscape_material_calculator]\"));\nwp_insert_post(array('post_type' => 'page', 'post_status' => 'publish', 'post_name' => 'gravel', 'post_title' => 'Gravel delivery calculator', 'post_content' => '[landscape_material_calculator material=\"gravel\"]'));\nwp_insert_post(array('post_type' => 'page', 'post_status' => 'publish', 'post_name' => 'contact', 'post_title' => 'Contact', 'post_content' => '<!-- wp:paragraph --><p>On a real site, this is where the quote button sends visitors.</p><!-- /wp:paragraph -->'));\nflush_rewrite_rules();\n"
+    }
+  ]
+}
