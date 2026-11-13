@@ -1,5 +1,5 @@
-=== Landscape Material Calculator ===
-Contributors: jessepy
+=== PileQuote Material Calculator ===
+Contributors: smalltoolshop
 Tags: mulch calculator, gravel calculator, concrete calculator, cubic yard, landscaping
 Requires at least: 6.3
 Tested up to: 7.1
@@ -26,7 +26,7 @@ to your quote or order page.
 * **Concrete bags:** optionally shows how many 40, 60, and 80 lb bags of premix the same job takes.
 * **Quote button:** links the result to your contact, quote, or shop page.
 * **Imperial or metric.**
-* A block and a shortcode, `[landscape_material_calculator]`, or `[landscape_material_calculator material="gravel"]` for one material.
+* A block and a shortcode, `[pilequote]`, or `[pilequote material="gravel"]` for one material.
 
 Private and light: the math runs in the visitor's browser. The plugin sends nothing anywhere, sets no cookies, adds no tracking,
 and loads its small script and stylesheet only on pages that show a calculator.
@@ -47,9 +47,9 @@ The calculator code is tested against hand-worked examples and against the engin
 
 == Installation ==
 
-1. Install from Plugins > Add New, or upload the `landscape-material-calculator` folder to `/wp-content/plugins/`, then activate it.
+1. Install from Plugins > Add New, or upload the `pilequote-material-calculator` folder to `/wp-content/plugins/`, then activate it.
 2. Go to Settings > Material Calculator. Pick your units, enter prices if you want them shown, and add your quote page link.
-3. Add the Material Calculator block to a page, or paste `[landscape_material_calculator]`.
+3. Add the Material Calculator block to a page, or paste `[pilequote]`.
 
 == Frequently Asked Questions ==
 

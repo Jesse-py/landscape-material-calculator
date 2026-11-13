@@ -6,7 +6,7 @@
 <title>Gravel and Mulch Calculator for Your Website: Free WordPress Plugin</title>
 <meta name="description" content="Free WordPress plugin for landscape supply yards: customers enter an area and depth and get yards or tons, rounded your way, with your price. Live demo.">
 <link rel="canonical" href="https://jesse-py.github.io/landscape-material-calculator/">
-<link rel="stylesheet" href="assets/lmcalc.css">
+<link rel="stylesheet" href="assets/pilequote.css">
 <style>
   :root { --ink: #1f2a1c; --muted: #4f5b4a; --line: #c9d1c2; --accent: #3d6b2c; --bg: #fbfcf8; }
   * { box-sizing: border-box; }
@@ -22,11 +22,11 @@
   .lede { font-size: 1.1rem; color: var(--muted); margin-top: 0; }
   a { color: var(--accent); }
   .demo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; align-items: start; }
-  .demo .lmcalc { background: #fff; margin-top: 0; }
+  .demo .pilequote { background: #fff; margin-top: 0; }
   .note { font-size: .95rem; color: var(--muted); }
   .btn { display: inline-block; padding: .6rem 1rem; border-radius: 6px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; margin: .3rem .5rem .3rem 0; }
   .btn.alt { background: #fff; color: var(--accent); border: 2px solid var(--accent); }
-  .lmcalc .wp-element-button { display: inline-block; padding: .5rem .9rem; border-radius: 5px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; }
+  .pilequote .wp-element-button { display: inline-block; padding: .5rem .9rem; border-radius: 5px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; }
   ol li, ul li { margin-bottom: .35rem; }
   code { background: #eef2e8; padding: .05rem .3rem; border-radius: 3px; font-size: .92em; }
   table { border-collapse: collapse; width: 100%; font-size: .95rem; }
@@ -38,7 +38,7 @@
 </head>
 <body>
 <header><div class="wrap">
-  <a href="./">Landscape Material Calculator</a>
+  <a href="./">PileQuote Material Calculator</a>
   <nav><a href="#demo">Demo</a><a href="#install">Install</a><a href="#faq">FAQ</a></nav>
 </div></header>
 <main><div class="wrap">
@@ -46,7 +46,7 @@
   <p class="lede">A free WordPress plugin for landscape supply yards, garden centers, and contractors. Your customer enters the size of the
     area and the depth. The calculator tells them how much to order, rounded the way you sell it, with your price and a button to your
     quote page. Fewer "how many yards do I need?" phone calls, and customers who arrive knowing what to order.</p>
-  <p><a class="btn" href="landscape-material-calculator-0.1.0.zip" data-goatcounter-click="mc-zip" download>Download the plugin (free, 0.1.0)</a>
+  <p><a class="btn" href="pilequote-material-calculator-0.1.0.zip" data-goatcounter-click="mc-zip" download>Download the plugin (free, 0.1.0)</a>
     <a class="btn alt" href="https://playground.wordpress.net/?blueprint-url=https://jesse-py.github.io/landscape-material-calculator/blueprint.json" data-goatcounter-click="mc-playground" rel="noopener">Try it in a real WordPress site</a></p>
   <p class="note">The second button opens a throwaway WordPress site in your browser (WordPress Playground) with the plugin installed and example
     prices set, so you can change the settings and see the result before you install anything. Nothing is saved.</p>
@@ -56,11 +56,11 @@
     half tons with a 1-ton minimum; mulch $34, topsoil $30, and concrete $165 a cubic yard. Pick #57 crushed stone and try 24 by 10 feet at 4 inches.</p>
   <div class="demo">
     <div>
-<!-- lmcalc:all -->
-<div class="lmcalc" data-lmcalc="{&quot;metric&quot;:false,&quot;currency&quot;:&quot;$&quot;,&quot;waste&quot;:0,&quot;materials&quot;:{&quot;mulch&quot;:{&quot;label&quot;:&quot;Double-shredded hardwood mulch&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:34,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;topsoil&quot;:{&quot;label&quot;:&quot;Topsoil&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:30,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:4,&quot;bags&quot;:false},&quot;compost&quot;:{&quot;label&quot;:&quot;Compost&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:0,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;gravel&quot;:{&quot;label&quot;:&quot;#57 crushed stone&quot;,&quot;soldBy&quot;:&quot;weight&quot;,&quot;density&quot;:1.35,&quot;price&quot;:38,&quot;step&quot;:0.5,&quot;min&quot;:1,&quot;depth&quot;:4,&quot;bags&quot;:false},&quot;sand&quot;:{&quot;label&quot;:&quot;Sand&quot;,&quot;soldBy&quot;:&quot;weight&quot;,&quot;density&quot;:1.35,&quot;price&quot;:0,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;concrete&quot;:{&quot;label&quot;:&quot;Concrete&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:165,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:4,&quot;bags&quot;:true}},&quot;i18n&quot;:{&quot;yd3&quot;:&quot;%s cubic yards&quot;,&quot;m3&quot;:&quot;%s cubic meters&quot;,&quot;tons&quot;:&quot;%s tons&quot;,&quot;tonnes&quot;:&quot;%s tonnes&quot;,&quot;yd3One&quot;:&quot;%s cubic yard&quot;,&quot;m3One&quot;:&quot;%s cubic meter&quot;,&quot;tonsOne&quot;:&quot;%s ton&quot;,&quot;tonnesOne&quot;:&quot;%s tonne&quot;,&quot;need&quot;:&quot;You need about %s.&quot;,&quot;needBoth&quot;:&quot;You need about %1$s (%2$s).&quot;,&quot;weighs&quot;:&quot;That is about %s of material.&quot;,&quot;waste&quot;:&quot;Includes %s%% extra for waste and settling.&quot;,&quot;order&quot;:&quot;Order %s.&quot;,&quot;stepNote&quot;:&quot;(We sell in steps of %s.)&quot;,&quot;minNote&quot;:&quot;(Minimum order: %s.)&quot;,&quot;cost&quot;:&quot;Estimated cost: %1$s at %2$s per %3$s, before delivery and tax.&quot;,&quot;unitYd3&quot;:&quot;cubic yard&quot;,&quot;unitM3&quot;:&quot;cubic meter&quot;,&quot;unitTon&quot;:&quot;ton&quot;,&quot;unitT&quot;:&quot;tonne&quot;,&quot;bag&quot;:&quot;%1$s bags of %2$s lb premix&quot;,&quot;bagsHead&quot;:&quot;Or in bags:&quot;,&quot;empty&quot;:&quot;Enter the size of the area and the depth.&quot;}}">
-<form class="lmcalc-form" novalidate>
-<p class="lmcalc-field"><label for="lmcalc-1-material">Material</label>
-<select id="lmcalc-1-material" name="material">
+<!-- pilequote:all -->
+<div class="pilequote" data-pilequote="{&quot;metric&quot;:false,&quot;currency&quot;:&quot;$&quot;,&quot;waste&quot;:0,&quot;materials&quot;:{&quot;mulch&quot;:{&quot;label&quot;:&quot;Double-shredded hardwood mulch&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:34,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;topsoil&quot;:{&quot;label&quot;:&quot;Topsoil&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:30,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:4,&quot;bags&quot;:false},&quot;compost&quot;:{&quot;label&quot;:&quot;Compost&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:0,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;gravel&quot;:{&quot;label&quot;:&quot;#57 crushed stone&quot;,&quot;soldBy&quot;:&quot;weight&quot;,&quot;density&quot;:1.35,&quot;price&quot;:38,&quot;step&quot;:0.5,&quot;min&quot;:1,&quot;depth&quot;:4,&quot;bags&quot;:false},&quot;sand&quot;:{&quot;label&quot;:&quot;Sand&quot;,&quot;soldBy&quot;:&quot;weight&quot;,&quot;density&quot;:1.35,&quot;price&quot;:0,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;concrete&quot;:{&quot;label&quot;:&quot;Concrete&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:165,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:4,&quot;bags&quot;:true}},&quot;i18n&quot;:{&quot;yd3&quot;:&quot;%s cubic yards&quot;,&quot;m3&quot;:&quot;%s cubic meters&quot;,&quot;tons&quot;:&quot;%s tons&quot;,&quot;tonnes&quot;:&quot;%s tonnes&quot;,&quot;yd3One&quot;:&quot;%s cubic yard&quot;,&quot;m3One&quot;:&quot;%s cubic meter&quot;,&quot;tonsOne&quot;:&quot;%s ton&quot;,&quot;tonnesOne&quot;:&quot;%s tonne&quot;,&quot;need&quot;:&quot;You need about %s.&quot;,&quot;needBoth&quot;:&quot;You need about %1$s (%2$s).&quot;,&quot;weighs&quot;:&quot;That is about %s of material.&quot;,&quot;waste&quot;:&quot;Includes %s%% extra for waste and settling.&quot;,&quot;order&quot;:&quot;Order %s.&quot;,&quot;stepNote&quot;:&quot;(We sell in steps of %s.)&quot;,&quot;minNote&quot;:&quot;(Minimum order: %s.)&quot;,&quot;cost&quot;:&quot;Estimated cost: %1$s at %2$s per %3$s, before delivery and tax.&quot;,&quot;unitYd3&quot;:&quot;cubic yard&quot;,&quot;unitM3&quot;:&quot;cubic meter&quot;,&quot;unitTon&quot;:&quot;ton&quot;,&quot;unitT&quot;:&quot;tonne&quot;,&quot;bag&quot;:&quot;%1$s bags of %2$s lb premix&quot;,&quot;bagsHead&quot;:&quot;Or in bags:&quot;,&quot;empty&quot;:&quot;Enter the size of the area and the depth.&quot;}}">
+<form class="pilequote-form" novalidate>
+<p class="pilequote-field"><label for="pilequote-1-material">Material</label>
+<select id="pilequote-1-material" name="material">
 <option value="mulch">Double-shredded hardwood mulch</option>
 <option value="topsoil">Topsoil</option>
 <option value="compost">Compost</option>
@@ -68,41 +68,41 @@
 <option value="sand">Sand</option>
 <option value="concrete">Concrete</option>
 </select></p>
-<p class="lmcalc-field"><label for="lmcalc-1-shape">Shape of the area</label>
-<select id="lmcalc-1-shape" name="shape">
+<p class="pilequote-field"><label for="pilequote-1-shape">Shape of the area</label>
+<select id="pilequote-1-shape" name="shape">
 <option value="rect">Rectangle</option>
 <option value="circle">Circle</option>
 <option value="triangle">Triangle</option>
 <option value="area">I know the area</option>
 </select></p>
-<p class="lmcalc-field" data-field="length"><label for="lmcalc-1-length">Length <span class="lmcalc-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="lmcalc-1-length" name="length" value=""></p><p class="lmcalc-field" data-field="width"><label for="lmcalc-1-width">Width <span class="lmcalc-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="lmcalc-1-width" name="width" value=""></p><p class="lmcalc-field" data-field="diameter"><label for="lmcalc-1-diameter">Diameter <span class="lmcalc-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="lmcalc-1-diameter" name="diameter" value=""></p><p class="lmcalc-field" data-field="base"><label for="lmcalc-1-base">Base <span class="lmcalc-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="lmcalc-1-base" name="base" value=""></p><p class="lmcalc-field" data-field="height"><label for="lmcalc-1-height">Height (base to tip) <span class="lmcalc-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="lmcalc-1-height" name="height" value=""></p><p class="lmcalc-field" data-field="area"><label for="lmcalc-1-area">Area <span class="lmcalc-unit">(sq ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="lmcalc-1-area" name="area" value=""></p><p class="lmcalc-field" data-field="depth"><label for="lmcalc-1-depth">Depth <span class="lmcalc-unit">(in)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="lmcalc-1-depth" name="depth" value="3"></p>		</form>
-<div class="lmcalc-result" aria-live="polite"><p>Enter the size of the area and the depth.</p></div>
-<p class="lmcalc-quote"><a class="wp-element-button" href="#quote-button">Request a quote</a></p>
+<p class="pilequote-field" data-field="length"><label for="pilequote-1-length">Length <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="pilequote-1-length" name="length" value=""></p><p class="pilequote-field" data-field="width"><label for="pilequote-1-width">Width <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="pilequote-1-width" name="width" value=""></p><p class="pilequote-field" data-field="diameter"><label for="pilequote-1-diameter">Diameter <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="pilequote-1-diameter" name="diameter" value=""></p><p class="pilequote-field" data-field="base"><label for="pilequote-1-base">Base <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="pilequote-1-base" name="base" value=""></p><p class="pilequote-field" data-field="height"><label for="pilequote-1-height">Height (base to tip) <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="pilequote-1-height" name="height" value=""></p><p class="pilequote-field" data-field="area"><label for="pilequote-1-area">Area <span class="pilequote-unit">(sq ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="pilequote-1-area" name="area" value=""></p><p class="pilequote-field" data-field="depth"><label for="pilequote-1-depth">Depth <span class="pilequote-unit">(in)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="pilequote-1-depth" name="depth" value="3"></p>		</form>
+<div class="pilequote-result" aria-live="polite"><p>Enter the size of the area and the depth.</p></div>
+<p class="pilequote-quote"><a class="wp-element-button" href="#quote-button">Request a quote</a></p>
 <noscript><p>This calculator needs JavaScript.</p></noscript>
 </div>
-<!-- /lmcalc:all -->
+<!-- /pilequote:all -->
     </div>
     <div>
       <h3 style="margin-top:0">One material on its own page</h3>
-      <p class="note">Use <code>[landscape_material_calculator material="gravel"]</code> or pick a material in the block, for a product page.</p>
-<!-- lmcalc:gravel -->
-<div class="lmcalc" data-lmcalc="{&quot;metric&quot;:false,&quot;currency&quot;:&quot;$&quot;,&quot;waste&quot;:0,&quot;materials&quot;:{&quot;gravel&quot;:{&quot;label&quot;:&quot;#57 crushed stone&quot;,&quot;soldBy&quot;:&quot;weight&quot;,&quot;density&quot;:1.35,&quot;price&quot;:38,&quot;step&quot;:0.5,&quot;min&quot;:1,&quot;depth&quot;:4,&quot;bags&quot;:false}},&quot;i18n&quot;:{&quot;yd3&quot;:&quot;%s cubic yards&quot;,&quot;m3&quot;:&quot;%s cubic meters&quot;,&quot;tons&quot;:&quot;%s tons&quot;,&quot;tonnes&quot;:&quot;%s tonnes&quot;,&quot;yd3One&quot;:&quot;%s cubic yard&quot;,&quot;m3One&quot;:&quot;%s cubic meter&quot;,&quot;tonsOne&quot;:&quot;%s ton&quot;,&quot;tonnesOne&quot;:&quot;%s tonne&quot;,&quot;need&quot;:&quot;You need about %s.&quot;,&quot;needBoth&quot;:&quot;You need about %1$s (%2$s).&quot;,&quot;weighs&quot;:&quot;That is about %s of material.&quot;,&quot;waste&quot;:&quot;Includes %s%% extra for waste and settling.&quot;,&quot;order&quot;:&quot;Order %s.&quot;,&quot;stepNote&quot;:&quot;(We sell in steps of %s.)&quot;,&quot;minNote&quot;:&quot;(Minimum order: %s.)&quot;,&quot;cost&quot;:&quot;Estimated cost: %1$s at %2$s per %3$s, before delivery and tax.&quot;,&quot;unitYd3&quot;:&quot;cubic yard&quot;,&quot;unitM3&quot;:&quot;cubic meter&quot;,&quot;unitTon&quot;:&quot;ton&quot;,&quot;unitT&quot;:&quot;tonne&quot;,&quot;bag&quot;:&quot;%1$s bags of %2$s lb premix&quot;,&quot;bagsHead&quot;:&quot;Or in bags:&quot;,&quot;empty&quot;:&quot;Enter the size of the area and the depth.&quot;}}">
-<form class="lmcalc-form" novalidate>
+      <p class="note">Use <code>[pilequote material="gravel"]</code> or pick a material in the block, for a product page.</p>
+<!-- pilequote:gravel -->
+<div class="pilequote" data-pilequote="{&quot;metric&quot;:false,&quot;currency&quot;:&quot;$&quot;,&quot;waste&quot;:0,&quot;materials&quot;:{&quot;gravel&quot;:{&quot;label&quot;:&quot;#57 crushed stone&quot;,&quot;soldBy&quot;:&quot;weight&quot;,&quot;density&quot;:1.35,&quot;price&quot;:38,&quot;step&quot;:0.5,&quot;min&quot;:1,&quot;depth&quot;:4,&quot;bags&quot;:false}},&quot;i18n&quot;:{&quot;yd3&quot;:&quot;%s cubic yards&quot;,&quot;m3&quot;:&quot;%s cubic meters&quot;,&quot;tons&quot;:&quot;%s tons&quot;,&quot;tonnes&quot;:&quot;%s tonnes&quot;,&quot;yd3One&quot;:&quot;%s cubic yard&quot;,&quot;m3One&quot;:&quot;%s cubic meter&quot;,&quot;tonsOne&quot;:&quot;%s ton&quot;,&quot;tonnesOne&quot;:&quot;%s tonne&quot;,&quot;need&quot;:&quot;You need about %s.&quot;,&quot;needBoth&quot;:&quot;You need about %1$s (%2$s).&quot;,&quot;weighs&quot;:&quot;That is about %s of material.&quot;,&quot;waste&quot;:&quot;Includes %s%% extra for waste and settling.&quot;,&quot;order&quot;:&quot;Order %s.&quot;,&quot;stepNote&quot;:&quot;(We sell in steps of %s.)&quot;,&quot;minNote&quot;:&quot;(Minimum order: %s.)&quot;,&quot;cost&quot;:&quot;Estimated cost: %1$s at %2$s per %3$s, before delivery and tax.&quot;,&quot;unitYd3&quot;:&quot;cubic yard&quot;,&quot;unitM3&quot;:&quot;cubic meter&quot;,&quot;unitTon&quot;:&quot;ton&quot;,&quot;unitT&quot;:&quot;tonne&quot;,&quot;bag&quot;:&quot;%1$s bags of %2$s lb premix&quot;,&quot;bagsHead&quot;:&quot;Or in bags:&quot;,&quot;empty&quot;:&quot;Enter the size of the area and the depth.&quot;}}">
+<form class="pilequote-form" novalidate>
 <input type="hidden" name="material" value="gravel">
-<p class="lmcalc-title">#57 crushed stone</p>
-<p class="lmcalc-field"><label for="lmcalc-2-shape">Shape of the area</label>
-<select id="lmcalc-2-shape" name="shape">
+<p class="pilequote-title">#57 crushed stone</p>
+<p class="pilequote-field"><label for="pilequote-2-shape">Shape of the area</label>
+<select id="pilequote-2-shape" name="shape">
 <option value="rect">Rectangle</option>
 <option value="circle">Circle</option>
 <option value="triangle">Triangle</option>
 <option value="area">I know the area</option>
 </select></p>
-<p class="lmcalc-field" data-field="length"><label for="lmcalc-2-length">Length <span class="lmcalc-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="lmcalc-2-length" name="length" value=""></p><p class="lmcalc-field" data-field="width"><label for="lmcalc-2-width">Width <span class="lmcalc-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="lmcalc-2-width" name="width" value=""></p><p class="lmcalc-field" data-field="diameter"><label for="lmcalc-2-diameter">Diameter <span class="lmcalc-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="lmcalc-2-diameter" name="diameter" value=""></p><p class="lmcalc-field" data-field="base"><label for="lmcalc-2-base">Base <span class="lmcalc-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="lmcalc-2-base" name="base" value=""></p><p class="lmcalc-field" data-field="height"><label for="lmcalc-2-height">Height (base to tip) <span class="lmcalc-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="lmcalc-2-height" name="height" value=""></p><p class="lmcalc-field" data-field="area"><label for="lmcalc-2-area">Area <span class="lmcalc-unit">(sq ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="lmcalc-2-area" name="area" value=""></p><p class="lmcalc-field" data-field="depth"><label for="lmcalc-2-depth">Depth <span class="lmcalc-unit">(in)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="lmcalc-2-depth" name="depth" value="4"></p>		</form>
-<div class="lmcalc-result" aria-live="polite"><p>Enter the size of the area and the depth.</p></div>
-<p class="lmcalc-quote"><a class="wp-element-button" href="#quote-button">Request a quote</a></p>
+<p class="pilequote-field" data-field="length"><label for="pilequote-2-length">Length <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="pilequote-2-length" name="length" value=""></p><p class="pilequote-field" data-field="width"><label for="pilequote-2-width">Width <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="pilequote-2-width" name="width" value=""></p><p class="pilequote-field" data-field="diameter"><label for="pilequote-2-diameter">Diameter <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="pilequote-2-diameter" name="diameter" value=""></p><p class="pilequote-field" data-field="base"><label for="pilequote-2-base">Base <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="pilequote-2-base" name="base" value=""></p><p class="pilequote-field" data-field="height"><label for="pilequote-2-height">Height (base to tip) <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="pilequote-2-height" name="height" value=""></p><p class="pilequote-field" data-field="area"><label for="pilequote-2-area">Area <span class="pilequote-unit">(sq ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="pilequote-2-area" name="area" value=""></p><p class="pilequote-field" data-field="depth"><label for="pilequote-2-depth">Depth <span class="pilequote-unit">(in)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="pilequote-2-depth" name="depth" value="4"></p>		</form>
+<div class="pilequote-result" aria-live="polite"><p>Enter the size of the area and the depth.</p></div>
+<p class="pilequote-quote"><a class="wp-element-button" href="#quote-button">Request a quote</a></p>
 <noscript><p>This calculator needs JavaScript.</p></noscript>
 </div>
-<!-- /lmcalc:gravel -->
+<!-- /pilequote:gravel -->
     </div>
   </div>
   <p class="note" id="quote-button">On your site, the "Request a quote" button goes to the page you choose: your contact form, quote form, or shop.
@@ -123,10 +123,10 @@
 
   <h2 id="install">Install</h2>
   <ol>
-    <li><a href="landscape-material-calculator-0.1.0.zip" data-goatcounter-click="mc-zip" download>Download the zip</a> (don't unzip it).</li>
+    <li><a href="pilequote-material-calculator-0.1.0.zip" data-goatcounter-click="mc-zip" download>Download the zip</a> (don't unzip it).</li>
     <li>In your WordPress dashboard, go to <strong>Plugins &gt; Add New Plugin &gt; Upload Plugin</strong>, choose the zip, click <strong>Install Now</strong>, then <strong>Activate</strong>.</li>
     <li>Go to <strong>Settings &gt; Material Calculator</strong>: tick the materials you sell, and add your prices, rounding, minimum, and quote page.</li>
-    <li>Add the <strong>Material Calculator</strong> block to a page, or paste <code>[landscape_material_calculator]</code> into one.</li>
+    <li>Add the <strong>Material Calculator</strong> block to a page, or paste <code>[pilequote]</code> into one.</li>
   </ol>
   <p class="note">Needs WordPress 6.3 or newer and PHP 7.4 or newer. Tested on WordPress 7.1 with PHP 8.3. It is also being prepared for the
     WordPress.org plugin directory; this page will link the listing once it's approved. The plugin's folder name is the same, so a site that installs this zip can update from the directory later.</p>
@@ -160,10 +160,10 @@
     the Playground blueprint, and this page.</p>
 </div></main>
 <footer><div class="wrap">
-  Landscape Material Calculator, a free plugin by Jesse-py. Results are estimates for planning an order; compaction, moisture, and uneven ground change the real amount.
+  PileQuote Material Calculator, a free plugin by Jesse-py. Results are estimates for planning an order; compaction, moisture, and uneven ground change the real amount.
   Also: <a href="https://jesse-py.github.io/diy-project-calculators/gravel-calculator/">gravel calculator for homeowners</a>.
 </div></footer>
-<script src="assets/lmcalc.js"></script>
+<script src="assets/pilequote.js"></script>
 <script>
 // Cookieless page-view counting (GoatCounter: no cookies, no personal data), only on the live site.
 if (/\.github\.io$/.test(location.hostname)) {

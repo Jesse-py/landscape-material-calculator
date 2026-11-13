@@ -1,4 +1,4 @@
-/* Landscape Material Calculator: math and form wiring. Runs only in the visitor's browser; sends nothing anywhere.
+/* PileQuote Material Calculator: math and form wiring. Runs only in the visitor's browser; sends nothing anywhere.
  * Imperial: lengths in feet, depth in inches, volume in cubic yards (27 cu ft), weight in short tons.
  * Metric: lengths in meters, depth in centimeters, volume in cubic meters, weight in tonnes.
  * Concrete bag yields: QUIKRETE Concrete Mix (No. 1101) data sheet (40 lb 0.30, 60 lb 0.45, 80 lb 0.60 cu ft). */
@@ -116,8 +116,8 @@
 
 	function setup(el) {
 		var cfg;
-		try { cfg = JSON.parse(el.getAttribute('data-lmcalc')); } catch (e) { return; }
-		var form = el.querySelector('form'), out = el.querySelector('.lmcalc-result');
+		try { cfg = JSON.parse(el.getAttribute('data-pilequote')); } catch (e) { return; }
+		var form = el.querySelector('form'), out = el.querySelector('.pilequote-result');
 		// Look inputs up by name: form.elements.length is the element count, not the "length" field.
 		var input = function (name) { return form.querySelector('[name="' + name + '"]'); };
 		var lastKey = input('material').value;
@@ -158,9 +158,9 @@
 	if (typeof module !== 'undefined' && module.exports) {
 		module.exports = api;
 	} else {
-		root.LandscapeMaterialCalculator = api;
+		root.PileQuote = api;
 		var start = function () {
-			var els = document.querySelectorAll('[data-lmcalc]');
+			var els = document.querySelectorAll('[data-pilequote]');
 			for (var i = 0; i < els.length; i++) setup(els[i]);
 		};
 		if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();

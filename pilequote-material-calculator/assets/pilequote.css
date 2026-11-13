@@ -1,0 +1,13 @@
+/* PileQuote Material Calculator: minimal styles that inherit the theme's fonts and colors. */
+.pilequote { max-width: 32rem; margin: 1.5em 0; padding: 1em 1.25em; border: 1px solid currentColor; border-radius: 6px; }
+.pilequote-form { margin: 0; }
+.pilequote-field { margin: 0 0 0.75em; }
+.pilequote-field label { display: block; font-weight: 600; margin-bottom: 0.25em; }
+.pilequote-unit { font-weight: 400; }
+.pilequote-field input, .pilequote-field select { width: 100%; max-width: 16rem; box-sizing: border-box; font: inherit; padding: 0.4em; }
+.pilequote-field[hidden] { display: none; }
+.pilequote-title { font-weight: 700; font-size: 1.1em; margin: 0 0 0.75em; }
+.pilequote-result { margin-top: 1em; padding-top: 0.75em; border-top: 1px solid currentColor; }
+.pilequote-result p { margin: 0 0 0.4em; }
+.pilequote-result p:first-child { font-weight: 700; font-size: 1.1em; }
+.pilequote-quote { margin: 1em 0 0; }

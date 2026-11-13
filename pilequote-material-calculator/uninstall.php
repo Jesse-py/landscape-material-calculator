@@ -2,10 +2,10 @@
 /**
  * Removes the plugin's single option when the plugin is deleted.
  *
- * @package LandscapeMaterialCalculator
+ * @package PileQuote
  */
 
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
-delete_option( 'lmcalc_settings' );
+delete_option( 'pilequote_settings' );

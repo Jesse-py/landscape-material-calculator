@@ -2,7 +2,7 @@
 /**
  * Editor script dependencies (written by hand; the script needs no build step).
  *
- * @package LandscapeMaterialCalculator
+ * @package PileQuote
  */
 
 return array(
