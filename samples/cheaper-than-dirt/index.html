@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Material calculator sample for Cheaper Than Dirt Landscape Supply (unofficial)</title>
+<style>
+body{margin:0;font:17px/1.55 system-ui,"Segoe UI",sans-serif;color:#1f2a22;background:#f5f3ee}
+.banner{background:#fff4d6;border-bottom:1px solid #e3cf8f;padding:12px 20px;font-size:15px}
+main{max-width:1000px;margin:0 auto;padding:24px 20px 48px}
+h1{font-size:28px;line-height:1.2;margin:.2em 0 .4em}
+h2{font-size:21px;margin:1.8em 0 .5em}
+.grid{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:start}
+@media (max-width:780px){.grid{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid #d9d4c7;border-radius:8px;padding:18px 20px}
+textarea{width:100%;box-sizing:border-box;height:160px;font:13px/1.4 ui-monospace,Consolas,monospace}
+table{border-collapse:collapse;width:100%;font-size:15px;background:#fff}
+th,td{border:1px solid #d9d4c7;padding:5px 8px;text-align:left}
+th{background:#ece8dd}
+.small{font-size:14px;opacity:.85}
+button{font:inherit;padding:.45em .9em;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="banner"><strong>Unofficial sample.</strong> Made for Cheaper Than Dirt Landscape Supply by Jesse at Simple Money Sheets, using prices copied from
+<a href="https://cheaperthandirtlandscapesupply.com/pricing">their public price list</a> on 2026-11-18. Cheaper Than Dirt Landscape Supply didn't make or endorse this page. Check their site for current prices.</div>
+<main>
+<h1>A "how much do I need?" calculator for Cheaper Than Dirt Landscape Supply</h1>
+<div class="grid">
+<section>
+<p>Customers type the size of their bed, path or driveway and see how many cubic yards to order and roughly what the material costs at your posted prices. It covers rectangles, circles, triangles, or a known area, and each material starts at a typical depth they can change.</p>
+<p>It's yours to use for free: copy the code below into your website. It's one self-contained block with no outside files, no tracking, and no account to make. It runs in the visitor's browser and sends nothing anywhere.</p>
+<h2>Add it to your site</h2>
+<ol>
+<li>In your site editor, add an <strong>HTML</strong>, <strong>Embed code</strong> or <strong>Custom code</strong> block where you want the calculator.</li>
+<li>Paste everything from the box below into it and save.</li>
+</ol>
+<p><button type="button" id="copy">Copy the code</button> <span id="copied" class="small" aria-live="polite"></span></p>
+<textarea id="code" readonly aria-label="Calculator code to paste into your site">&lt;!-- Material calculator for Cheaper Than Dirt Landscape Supply. Paste this whole block into an HTML / embed / code block. Runs in the visitor's browser; sends nothing anywhere. --&gt;
+&lt;div class=&quot;yq-calc&quot;&gt;
+&lt;p class=&quot;yq-where&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-where&quot;&gt;Yard&lt;/label&gt;&lt;select id=&quot;yq-cheaper-than-dirt-where&quot;&gt;&lt;option value=&quot;0&quot;&gt;Belton&lt;/option&gt;&lt;option value=&quot;1&quot;&gt;Waco&lt;/option&gt;&lt;/select&gt;&lt;/p&gt;
+&lt;div class=&quot;pilequote&quot; data-yq-col=&quot;0&quot; data-pilequote=&quot;{&amp;quot;metric&amp;quot;:false,&amp;quot;currency&amp;quot;:&amp;quot;$&amp;quot;,&amp;quot;waste&amp;quot;:0,&amp;quot;materials&amp;quot;:{&amp;quot;m1&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Black mulch&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:55,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m2&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Hardwood mulch&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:50,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m3&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Cedar mulch&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:45,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m4&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Sandy loam topsoil&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:35,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:4,&amp;quot;bags&amp;quot;:false},&amp;quot;m5&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Chocolate loam&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:35,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:4,&amp;quot;bags&amp;quot;:false},&amp;quot;m6&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Organic compost / garden mix&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:50,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:2,&amp;quot;bags&amp;quot;:false},&amp;quot;m7&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Spring Mix (sandy loam + garden mix)&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:50,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:4,&amp;quot;bags&amp;quot;:false},&amp;quot;m8&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Cottonseed compost&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:40,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:2,&amp;quot;bags&amp;quot;:false},&amp;quot;m9&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Turkey manure compost&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:55,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:2,&amp;quot;bags&amp;quot;:false},&amp;quot;m10&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Pecan hull compost&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:40,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:2,&amp;quot;bags&amp;quot;:false},&amp;quot;m11&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Cow manure compost&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:70,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:2,&amp;quot;bags&amp;quot;:false},&amp;quot;m12&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Concrete sand / pool sand&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:45,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:2,&amp;quot;bags&amp;quot;:false},&amp;quot;m13&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Brick sand / mason sand&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:60,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:2,&amp;quot;bags&amp;quot;:false},&amp;quot;m14&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;White mason sand&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:100,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:2,&amp;quot;bags&amp;quot;:false},&amp;quot;m15&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Crushed limestone 3/8\&amp;quot; chip&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:50,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m16&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Crushed limestone 1\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:50,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m17&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Crushed limestone 2\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:50,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m18&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;River rock 3/8\&amp;quot; (pea gravel)&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:45,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m19&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;River rock 1\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:45,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m20&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Brazos River rock 2\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:100,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m21&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Crushed granite&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:80,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m22&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Decomposed granite 1/2\&amp;quot; minus&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:60,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m23&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Decomposed granite 1/4\&amp;quot; minus&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:65,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m24&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Landscape rock 2\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:70,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m25&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Rainbow rock&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:110,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m26&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Austin rock&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:105,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m27&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Belton blend&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:105,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m28&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Sabine&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:120,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m29&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Black Star 5/8\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:175,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m30&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Black Star 1\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:175,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m31&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Black Star 2\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:185,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m32&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Peach cobble 1 x 3\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:100,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m33&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Peach cobble 2 x 4\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:105,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m34&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Road base&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:30,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:4,&amp;quot;bags&amp;quot;:false},&amp;quot;m35&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Crusher fines&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:20,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:4,&amp;quot;bags&amp;quot;:false},&amp;quot;m36&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Reclaimed asphalt&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:50,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:4,&amp;quot;bags&amp;quot;:false}},&amp;quot;i18n&amp;quot;:{&amp;quot;yd3&amp;quot;:&amp;quot;%s cubic yards&amp;quot;,&amp;quot;m3&amp;quot;:&amp;quot;%s cubic meters&amp;quot;,&amp;quot;tons&amp;quot;:&amp;quot;%s tons&amp;quot;,&amp;quot;tonnes&amp;quot;:&amp;quot;%s tonnes&amp;quot;,&amp;quot;yd3One&amp;quot;:&amp;quot;%s cubic yard&amp;quot;,&amp;quot;m3One&amp;quot;:&amp;quot;%s cubic meter&amp;quot;,&amp;quot;tonsOne&amp;quot;:&amp;quot;%s ton&amp;quot;,&amp;quot;tonnesOne&amp;quot;:&amp;quot;%s tonne&amp;quot;,&amp;quot;need&amp;quot;:&amp;quot;You need about %s.&amp;quot;,&amp;quot;needBoth&amp;quot;:&amp;quot;You need about %1$s (%2$s).&amp;quot;,&amp;quot;weighs&amp;quot;:&amp;quot;That is about %s of material.&amp;quot;,&amp;quot;waste&amp;quot;:&amp;quot;Includes %s%% extra for waste and settling.&amp;quot;,&amp;quot;order&amp;quot;:&amp;quot;Order %s.&amp;quot;,&amp;quot;stepNote&amp;quot;:&amp;quot;(We sell in steps of %s.)&amp;quot;,&amp;quot;minNote&amp;quot;:&amp;quot;(Minimum order: %s.)&amp;quot;,&amp;quot;cost&amp;quot;:&amp;quot;Estimated cost: %1$s at %2$s per %3$s, before delivery and tax.&amp;quot;,&amp;quot;unitYd3&amp;quot;:&amp;quot;cubic yard&amp;quot;,&amp;quot;unitM3&amp;quot;:&amp;quot;cubic meter&amp;quot;,&amp;quot;unitTon&amp;quot;:&amp;quot;ton&amp;quot;,&amp;quot;unitT&amp;quot;:&amp;quot;tonne&amp;quot;,&amp;quot;bag&amp;quot;:&amp;quot;%1$s bags of %2$s lb premix&amp;quot;,&amp;quot;bagsHead&amp;quot;:&amp;quot;Or in bags:&amp;quot;,&amp;quot;empty&amp;quot;:&amp;quot;Enter the size of the area and the depth.&amp;quot;}}&quot;&gt;
+&lt;form class=&quot;pilequote-form&quot; novalidate&gt;
+&lt;p class=&quot;pilequote-field&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-1-material&quot;&gt;Material&lt;/label&gt;
+&lt;select id=&quot;yq-cheaper-than-dirt-1-material&quot; name=&quot;material&quot;&gt;
+&lt;optgroup label=&quot;Mulch&quot;&gt;
+&lt;option value=&quot;m1&quot;&gt;Black mulch&lt;/option&gt;
+&lt;option value=&quot;m2&quot;&gt;Hardwood mulch&lt;/option&gt;
+&lt;option value=&quot;m3&quot;&gt;Cedar mulch&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label=&quot;Soil and compost&quot;&gt;
+&lt;option value=&quot;m4&quot;&gt;Sandy loam topsoil&lt;/option&gt;
+&lt;option value=&quot;m5&quot;&gt;Chocolate loam&lt;/option&gt;
+&lt;option value=&quot;m6&quot;&gt;Organic compost / garden mix&lt;/option&gt;
+&lt;option value=&quot;m7&quot;&gt;Spring Mix (sandy loam + garden mix)&lt;/option&gt;
+&lt;option value=&quot;m8&quot;&gt;Cottonseed compost&lt;/option&gt;
+&lt;option value=&quot;m9&quot;&gt;Turkey manure compost&lt;/option&gt;
+&lt;option value=&quot;m10&quot;&gt;Pecan hull compost&lt;/option&gt;
+&lt;option value=&quot;m11&quot;&gt;Cow manure compost&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label=&quot;Sand&quot;&gt;
+&lt;option value=&quot;m12&quot;&gt;Concrete sand / pool sand&lt;/option&gt;
+&lt;option value=&quot;m13&quot;&gt;Brick sand / mason sand&lt;/option&gt;
+&lt;option value=&quot;m14&quot;&gt;White mason sand&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label=&quot;Rock and gravel&quot;&gt;
+&lt;option value=&quot;m15&quot;&gt;Crushed limestone 3/8&amp;quot; chip&lt;/option&gt;
+&lt;option value=&quot;m16&quot;&gt;Crushed limestone 1&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m17&quot;&gt;Crushed limestone 2&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m18&quot;&gt;River rock 3/8&amp;quot; (pea gravel)&lt;/option&gt;
+&lt;option value=&quot;m19&quot;&gt;River rock 1&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m20&quot;&gt;Brazos River rock 2&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m21&quot;&gt;Crushed granite&lt;/option&gt;
+&lt;option value=&quot;m22&quot;&gt;Decomposed granite 1/2&amp;quot; minus&lt;/option&gt;
+&lt;option value=&quot;m23&quot;&gt;Decomposed granite 1/4&amp;quot; minus&lt;/option&gt;
+&lt;option value=&quot;m24&quot;&gt;Landscape rock 2&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m25&quot;&gt;Rainbow rock&lt;/option&gt;
+&lt;option value=&quot;m26&quot;&gt;Austin rock&lt;/option&gt;
+&lt;option value=&quot;m27&quot;&gt;Belton blend&lt;/option&gt;
+&lt;option value=&quot;m28&quot;&gt;Sabine&lt;/option&gt;
+&lt;option value=&quot;m29&quot;&gt;Black Star 5/8&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m30&quot;&gt;Black Star 1&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m31&quot;&gt;Black Star 2&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m32&quot;&gt;Peach cobble 1 x 3&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m33&quot;&gt;Peach cobble 2 x 4&amp;quot;&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label=&quot;Base&quot;&gt;
+&lt;option value=&quot;m34&quot;&gt;Road base&lt;/option&gt;
+&lt;option value=&quot;m35&quot;&gt;Crusher fines&lt;/option&gt;
+&lt;option value=&quot;m36&quot;&gt;Reclaimed asphalt&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;/select&gt;&lt;/p&gt;
+&lt;p class=&quot;pilequote-field&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-1-shape&quot;&gt;Shape of the area&lt;/label&gt;
+&lt;select id=&quot;yq-cheaper-than-dirt-1-shape&quot; name=&quot;shape&quot;&gt;
+&lt;option value=&quot;rect&quot;&gt;Rectangle&lt;/option&gt;
+&lt;option value=&quot;circle&quot;&gt;Circle&lt;/option&gt;
+&lt;option value=&quot;triangle&quot;&gt;Triangle&lt;/option&gt;
+&lt;option value=&quot;area&quot;&gt;I know the area&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+&lt;p class=&quot;pilequote-field&quot; data-field=&quot;length&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-1-length&quot;&gt;Length &lt;span class=&quot;pilequote-unit&quot;&gt;(ft)&lt;/span&gt;&lt;/label&gt; &lt;input type=&quot;number&quot; inputmode=&quot;decimal&quot; min=&quot;0&quot; step=&quot;any&quot; id=&quot;yq-cheaper-than-dirt-1-length&quot; name=&quot;length&quot; value=&quot;&quot;&gt;&lt;/p&gt;&lt;p class=&quot;pilequote-field&quot; data-field=&quot;width&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-1-width&quot;&gt;Width &lt;span class=&quot;pilequote-unit&quot;&gt;(ft)&lt;/span&gt;&lt;/label&gt; &lt;input type=&quot;number&quot; inputmode=&quot;decimal&quot; min=&quot;0&quot; step=&quot;any&quot; id=&quot;yq-cheaper-than-dirt-1-width&quot; name=&quot;width&quot; value=&quot;&quot;&gt;&lt;/p&gt;&lt;p class=&quot;pilequote-field&quot; data-field=&quot;diameter&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-1-diameter&quot;&gt;Diameter &lt;span class=&quot;pilequote-unit&quot;&gt;(ft)&lt;/span&gt;&lt;/label&gt; &lt;input type=&quot;number&quot; inputmode=&quot;decimal&quot; min=&quot;0&quot; step=&quot;any&quot; id=&quot;yq-cheaper-than-dirt-1-diameter&quot; name=&quot;diameter&quot; value=&quot;&quot;&gt;&lt;/p&gt;&lt;p class=&quot;pilequote-field&quot; data-field=&quot;base&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-1-base&quot;&gt;Base &lt;span class=&quot;pilequote-unit&quot;&gt;(ft)&lt;/span&gt;&lt;/label&gt; &lt;input type=&quot;number&quot; inputmode=&quot;decimal&quot; min=&quot;0&quot; step=&quot;any&quot; id=&quot;yq-cheaper-than-dirt-1-base&quot; name=&quot;base&quot; value=&quot;&quot;&gt;&lt;/p&gt;&lt;p class=&quot;pilequote-field&quot; data-field=&quot;height&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-1-height&quot;&gt;Height (base to tip) &lt;span class=&quot;pilequote-unit&quot;&gt;(ft)&lt;/span&gt;&lt;/label&gt; &lt;input type=&quot;number&quot; inputmode=&quot;decimal&quot; min=&quot;0&quot; step=&quot;any&quot; id=&quot;yq-cheaper-than-dirt-1-height&quot; name=&quot;height&quot; value=&quot;&quot;&gt;&lt;/p&gt;&lt;p class=&quot;pilequote-field&quot; data-field=&quot;area&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-1-area&quot;&gt;Area &lt;span class=&quot;pilequote-unit&quot;&gt;(sq ft)&lt;/span&gt;&lt;/label&gt; &lt;input type=&quot;number&quot; inputmode=&quot;decimal&quot; min=&quot;0&quot; step=&quot;any&quot; id=&quot;yq-cheaper-than-dirt-1-area&quot; name=&quot;area&quot; value=&quot;&quot;&gt;&lt;/p&gt;&lt;p class=&quot;pilequote-field&quot; data-field=&quot;depth&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-1-depth&quot;&gt;Depth &lt;span class=&quot;pilequote-unit&quot;&gt;(in)&lt;/span&gt;&lt;/label&gt; &lt;input type=&quot;number&quot; inputmode=&quot;decimal&quot; min=&quot;0&quot; step=&quot;any&quot; id=&quot;yq-cheaper-than-dirt-1-depth&quot; name=&quot;depth&quot; value=&quot;3&quot;&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;div class=&quot;pilequote-result&quot; aria-live=&quot;polite&quot;&gt;&lt;p&gt;Enter the size of the area and the depth.&lt;/p&gt;&lt;/div&gt;
+&lt;p class=&quot;pilequote-quote&quot;&gt;&lt;a class=&quot;yq-button&quot; href=&quot;tel:+12545345279&quot;&gt;Call to order: (254) 534-5279&lt;/a&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;p&gt;This calculator needs JavaScript.&lt;/p&gt;&lt;/noscript&gt;
+&lt;/div&gt;
+&lt;div class=&quot;pilequote&quot; data-yq-col=&quot;1&quot; hidden data-pilequote=&quot;{&amp;quot;metric&amp;quot;:false,&amp;quot;currency&amp;quot;:&amp;quot;$&amp;quot;,&amp;quot;waste&amp;quot;:0,&amp;quot;materials&amp;quot;:{&amp;quot;m1&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Black mulch&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:60,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m2&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Hardwood mulch&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:55,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m3&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Cedar mulch&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:45,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m4&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Sandy loam topsoil&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:30,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:4,&amp;quot;bags&amp;quot;:false},&amp;quot;m5&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Chocolate loam&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:35,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:4,&amp;quot;bags&amp;quot;:false},&amp;quot;m6&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Organic compost / garden mix&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:50,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:2,&amp;quot;bags&amp;quot;:false},&amp;quot;m7&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Spring Mix (sandy loam + garden mix)&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:50,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:4,&amp;quot;bags&amp;quot;:false},&amp;quot;m8&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Cottonseed compost&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:40,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:2,&amp;quot;bags&amp;quot;:false},&amp;quot;m9&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Turkey manure compost&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:55,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:2,&amp;quot;bags&amp;quot;:false},&amp;quot;m10&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Pecan hull compost&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:40,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:2,&amp;quot;bags&amp;quot;:false},&amp;quot;m11&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Cow manure compost&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:70,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:2,&amp;quot;bags&amp;quot;:false},&amp;quot;m12&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Concrete sand / pool sand&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:45,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:2,&amp;quot;bags&amp;quot;:false},&amp;quot;m13&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Brick sand / mason sand&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:60,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:2,&amp;quot;bags&amp;quot;:false},&amp;quot;m14&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;White mason sand&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:115,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:2,&amp;quot;bags&amp;quot;:false},&amp;quot;m15&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Crushed limestone 3/8\&amp;quot; chip&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:55,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m16&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Crushed limestone 1\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:55,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m17&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Crushed limestone 2\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:50,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m18&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;River rock 3/8\&amp;quot; (pea gravel)&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:45,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m19&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;River rock 1\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:45,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m20&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Brazos River rock 2\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:70,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m21&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Crushed granite&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:80,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m22&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Decomposed granite 1/2\&amp;quot; minus&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:60,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m23&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Decomposed granite 1/4\&amp;quot; minus&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:65,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m24&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Landscape rock 2\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:70,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m25&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Rainbow rock&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:110,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m26&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Austin rock&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:110,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m27&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Belton blend&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:125,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m28&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Sabine&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:170,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m29&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Black Star 5/8\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:185,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m30&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Black Star 1\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:185,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m31&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Black Star 2\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:185,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m32&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Peach cobble 1 x 3\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:125,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m33&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Peach cobble 2 x 4\&amp;quot;&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:125,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:3,&amp;quot;bags&amp;quot;:false},&amp;quot;m34&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Road base&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:35,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:4,&amp;quot;bags&amp;quot;:false},&amp;quot;m35&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Crusher fines&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:30,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:4,&amp;quot;bags&amp;quot;:false},&amp;quot;m36&amp;quot;:{&amp;quot;label&amp;quot;:&amp;quot;Reclaimed asphalt&amp;quot;,&amp;quot;soldBy&amp;quot;:&amp;quot;volume&amp;quot;,&amp;quot;density&amp;quot;:0,&amp;quot;price&amp;quot;:50,&amp;quot;step&amp;quot;:0,&amp;quot;min&amp;quot;:0,&amp;quot;depth&amp;quot;:4,&amp;quot;bags&amp;quot;:false}},&amp;quot;i18n&amp;quot;:{&amp;quot;yd3&amp;quot;:&amp;quot;%s cubic yards&amp;quot;,&amp;quot;m3&amp;quot;:&amp;quot;%s cubic meters&amp;quot;,&amp;quot;tons&amp;quot;:&amp;quot;%s tons&amp;quot;,&amp;quot;tonnes&amp;quot;:&amp;quot;%s tonnes&amp;quot;,&amp;quot;yd3One&amp;quot;:&amp;quot;%s cubic yard&amp;quot;,&amp;quot;m3One&amp;quot;:&amp;quot;%s cubic meter&amp;quot;,&amp;quot;tonsOne&amp;quot;:&amp;quot;%s ton&amp;quot;,&amp;quot;tonnesOne&amp;quot;:&amp;quot;%s tonne&amp;quot;,&amp;quot;need&amp;quot;:&amp;quot;You need about %s.&amp;quot;,&amp;quot;needBoth&amp;quot;:&amp;quot;You need about %1$s (%2$s).&amp;quot;,&amp;quot;weighs&amp;quot;:&amp;quot;That is about %s of material.&amp;quot;,&amp;quot;waste&amp;quot;:&amp;quot;Includes %s%% extra for waste and settling.&amp;quot;,&amp;quot;order&amp;quot;:&amp;quot;Order %s.&amp;quot;,&amp;quot;stepNote&amp;quot;:&amp;quot;(We sell in steps of %s.)&amp;quot;,&amp;quot;minNote&amp;quot;:&amp;quot;(Minimum order: %s.)&amp;quot;,&amp;quot;cost&amp;quot;:&amp;quot;Estimated cost: %1$s at %2$s per %3$s, before delivery and tax.&amp;quot;,&amp;quot;unitYd3&amp;quot;:&amp;quot;cubic yard&amp;quot;,&amp;quot;unitM3&amp;quot;:&amp;quot;cubic meter&amp;quot;,&amp;quot;unitTon&amp;quot;:&amp;quot;ton&amp;quot;,&amp;quot;unitT&amp;quot;:&amp;quot;tonne&amp;quot;,&amp;quot;bag&amp;quot;:&amp;quot;%1$s bags of %2$s lb premix&amp;quot;,&amp;quot;bagsHead&amp;quot;:&amp;quot;Or in bags:&amp;quot;,&amp;quot;empty&amp;quot;:&amp;quot;Enter the size of the area and the depth.&amp;quot;}}&quot;&gt;
+&lt;form class=&quot;pilequote-form&quot; novalidate&gt;
+&lt;p class=&quot;pilequote-field&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-2-material&quot;&gt;Material&lt;/label&gt;
+&lt;select id=&quot;yq-cheaper-than-dirt-2-material&quot; name=&quot;material&quot;&gt;
+&lt;optgroup label=&quot;Mulch&quot;&gt;
+&lt;option value=&quot;m1&quot;&gt;Black mulch&lt;/option&gt;
+&lt;option value=&quot;m2&quot;&gt;Hardwood mulch&lt;/option&gt;
+&lt;option value=&quot;m3&quot;&gt;Cedar mulch&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label=&quot;Soil and compost&quot;&gt;
+&lt;option value=&quot;m4&quot;&gt;Sandy loam topsoil&lt;/option&gt;
+&lt;option value=&quot;m5&quot;&gt;Chocolate loam&lt;/option&gt;
+&lt;option value=&quot;m6&quot;&gt;Organic compost / garden mix&lt;/option&gt;
+&lt;option value=&quot;m7&quot;&gt;Spring Mix (sandy loam + garden mix)&lt;/option&gt;
+&lt;option value=&quot;m8&quot;&gt;Cottonseed compost&lt;/option&gt;
+&lt;option value=&quot;m9&quot;&gt;Turkey manure compost&lt;/option&gt;
+&lt;option value=&quot;m10&quot;&gt;Pecan hull compost&lt;/option&gt;
+&lt;option value=&quot;m11&quot;&gt;Cow manure compost&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label=&quot;Sand&quot;&gt;
+&lt;option value=&quot;m12&quot;&gt;Concrete sand / pool sand&lt;/option&gt;
+&lt;option value=&quot;m13&quot;&gt;Brick sand / mason sand&lt;/option&gt;
+&lt;option value=&quot;m14&quot;&gt;White mason sand&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label=&quot;Rock and gravel&quot;&gt;
+&lt;option value=&quot;m15&quot;&gt;Crushed limestone 3/8&amp;quot; chip&lt;/option&gt;
+&lt;option value=&quot;m16&quot;&gt;Crushed limestone 1&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m17&quot;&gt;Crushed limestone 2&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m18&quot;&gt;River rock 3/8&amp;quot; (pea gravel)&lt;/option&gt;
+&lt;option value=&quot;m19&quot;&gt;River rock 1&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m20&quot;&gt;Brazos River rock 2&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m21&quot;&gt;Crushed granite&lt;/option&gt;
+&lt;option value=&quot;m22&quot;&gt;Decomposed granite 1/2&amp;quot; minus&lt;/option&gt;
+&lt;option value=&quot;m23&quot;&gt;Decomposed granite 1/4&amp;quot; minus&lt;/option&gt;
+&lt;option value=&quot;m24&quot;&gt;Landscape rock 2&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m25&quot;&gt;Rainbow rock&lt;/option&gt;
+&lt;option value=&quot;m26&quot;&gt;Austin rock&lt;/option&gt;
+&lt;option value=&quot;m27&quot;&gt;Belton blend&lt;/option&gt;
+&lt;option value=&quot;m28&quot;&gt;Sabine&lt;/option&gt;
+&lt;option value=&quot;m29&quot;&gt;Black Star 5/8&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m30&quot;&gt;Black Star 1&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m31&quot;&gt;Black Star 2&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m32&quot;&gt;Peach cobble 1 x 3&amp;quot;&lt;/option&gt;
+&lt;option value=&quot;m33&quot;&gt;Peach cobble 2 x 4&amp;quot;&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label=&quot;Base&quot;&gt;
+&lt;option value=&quot;m34&quot;&gt;Road base&lt;/option&gt;
+&lt;option value=&quot;m35&quot;&gt;Crusher fines&lt;/option&gt;
+&lt;option value=&quot;m36&quot;&gt;Reclaimed asphalt&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;/select&gt;&lt;/p&gt;
+&lt;p class=&quot;pilequote-field&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-2-shape&quot;&gt;Shape of the area&lt;/label&gt;
+&lt;select id=&quot;yq-cheaper-than-dirt-2-shape&quot; name=&quot;shape&quot;&gt;
+&lt;option value=&quot;rect&quot;&gt;Rectangle&lt;/option&gt;
+&lt;option value=&quot;circle&quot;&gt;Circle&lt;/option&gt;
+&lt;option value=&quot;triangle&quot;&gt;Triangle&lt;/option&gt;
+&lt;option value=&quot;area&quot;&gt;I know the area&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+&lt;p class=&quot;pilequote-field&quot; data-field=&quot;length&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-2-length&quot;&gt;Length &lt;span class=&quot;pilequote-unit&quot;&gt;(ft)&lt;/span&gt;&lt;/label&gt; &lt;input type=&quot;number&quot; inputmode=&quot;decimal&quot; min=&quot;0&quot; step=&quot;any&quot; id=&quot;yq-cheaper-than-dirt-2-length&quot; name=&quot;length&quot; value=&quot;&quot;&gt;&lt;/p&gt;&lt;p class=&quot;pilequote-field&quot; data-field=&quot;width&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-2-width&quot;&gt;Width &lt;span class=&quot;pilequote-unit&quot;&gt;(ft)&lt;/span&gt;&lt;/label&gt; &lt;input type=&quot;number&quot; inputmode=&quot;decimal&quot; min=&quot;0&quot; step=&quot;any&quot; id=&quot;yq-cheaper-than-dirt-2-width&quot; name=&quot;width&quot; value=&quot;&quot;&gt;&lt;/p&gt;&lt;p class=&quot;pilequote-field&quot; data-field=&quot;diameter&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-2-diameter&quot;&gt;Diameter &lt;span class=&quot;pilequote-unit&quot;&gt;(ft)&lt;/span&gt;&lt;/label&gt; &lt;input type=&quot;number&quot; inputmode=&quot;decimal&quot; min=&quot;0&quot; step=&quot;any&quot; id=&quot;yq-cheaper-than-dirt-2-diameter&quot; name=&quot;diameter&quot; value=&quot;&quot;&gt;&lt;/p&gt;&lt;p class=&quot;pilequote-field&quot; data-field=&quot;base&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-2-base&quot;&gt;Base &lt;span class=&quot;pilequote-unit&quot;&gt;(ft)&lt;/span&gt;&lt;/label&gt; &lt;input type=&quot;number&quot; inputmode=&quot;decimal&quot; min=&quot;0&quot; step=&quot;any&quot; id=&quot;yq-cheaper-than-dirt-2-base&quot; name=&quot;base&quot; value=&quot;&quot;&gt;&lt;/p&gt;&lt;p class=&quot;pilequote-field&quot; data-field=&quot;height&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-2-height&quot;&gt;Height (base to tip) &lt;span class=&quot;pilequote-unit&quot;&gt;(ft)&lt;/span&gt;&lt;/label&gt; &lt;input type=&quot;number&quot; inputmode=&quot;decimal&quot; min=&quot;0&quot; step=&quot;any&quot; id=&quot;yq-cheaper-than-dirt-2-height&quot; name=&quot;height&quot; value=&quot;&quot;&gt;&lt;/p&gt;&lt;p class=&quot;pilequote-field&quot; data-field=&quot;area&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-2-area&quot;&gt;Area &lt;span class=&quot;pilequote-unit&quot;&gt;(sq ft)&lt;/span&gt;&lt;/label&gt; &lt;input type=&quot;number&quot; inputmode=&quot;decimal&quot; min=&quot;0&quot; step=&quot;any&quot; id=&quot;yq-cheaper-than-dirt-2-area&quot; name=&quot;area&quot; value=&quot;&quot;&gt;&lt;/p&gt;&lt;p class=&quot;pilequote-field&quot; data-field=&quot;depth&quot;&gt;&lt;label for=&quot;yq-cheaper-than-dirt-2-depth&quot;&gt;Depth &lt;span class=&quot;pilequote-unit&quot;&gt;(in)&lt;/span&gt;&lt;/label&gt; &lt;input type=&quot;number&quot; inputmode=&quot;decimal&quot; min=&quot;0&quot; step=&quot;any&quot; id=&quot;yq-cheaper-than-dirt-2-depth&quot; name=&quot;depth&quot; value=&quot;3&quot;&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;div class=&quot;pilequote-result&quot; aria-live=&quot;polite&quot;&gt;&lt;p&gt;Enter the size of the area and the depth.&lt;/p&gt;&lt;/div&gt;
+&lt;p class=&quot;pilequote-quote&quot;&gt;&lt;a class=&quot;yq-button&quot; href=&quot;tel:+12545345279&quot;&gt;Call to order: (254) 534-5279&lt;/a&gt;&lt;/p&gt;
+&lt;noscript&gt;&lt;p&gt;This calculator needs JavaScript.&lt;/p&gt;&lt;/noscript&gt;
+&lt;/div&gt;
+&lt;p class=&quot;yq-note&quot;&gt;Delivery is quoted by distance and amount (typically 1 to 2 cubic yards minimum), so the estimate is for material only.&lt;/p&gt;
+&lt;style&gt;
+/* PileQuote Material Calculator: minimal styles that inherit the theme's fonts and colors. */
+.pilequote { max-width: 32rem; margin: 1.5em 0; padding: 1em 1.25em; border: 1px solid currentColor; border-radius: 6px; }
+.pilequote-form { margin: 0; }
+.pilequote-field { margin: 0 0 0.75em; }
+.pilequote-field label { display: block; font-weight: 600; margin-bottom: 0.25em; }
+.pilequote-unit { font-weight: 400; }
+.pilequote-field input, .pilequote-field select { width: 100%; max-width: 16rem; box-sizing: border-box; font: inherit; padding: 0.4em; }
+.pilequote-field[hidden] { display: none; }
+.pilequote-title { font-weight: 700; font-size: 1.1em; margin: 0 0 0.75em; }
+.pilequote-result { margin-top: 1em; padding-top: 0.75em; border-top: 1px solid currentColor; }
+.pilequote-result p { margin: 0 0 0.4em; }
+.pilequote-result p:first-child { font-weight: 700; font-size: 1.1em; }
+.pilequote-quote { margin: 1em 0 0; }
+.yq-calc{font:inherit;color:inherit}
+.yq-calc .pilequote{margin:0}
+.yq-calc .pilequote[hidden]{display:none}
+.yq-where{margin:0 0 .75em}.yq-where label{display:block;font-weight:600;margin-bottom:.25em}
+.yq-where select{font:inherit;padding:.4em;width:100%;max-width:16rem}
+.yq-button{display:inline-block;padding:.55em 1em;border-radius:5px;background:#2f6b3a;color:#fff!important;text-decoration:none;font-weight:600}
+.yq-note{font-size:.9em;margin:.75em 0 0;opacity:.85}
+&lt;/style&gt;
+&lt;script&gt;
+/* PileQuote Material Calculator: math and form wiring. Runs only in the visitor's browser; sends nothing anywhere.
+ * Imperial: lengths in feet, depth in inches, volume in cubic yards (27 cu ft), weight in short tons.
+ * Metric: lengths in meters, depth in centimeters, volume in cubic meters, weight in tonnes.
+ * Concrete bag yields: QUIKRETE Concrete Mix (No. 1101) data sheet (40 lb 0.30, 60 lb 0.45, 80 lb 0.60 cu ft). */
+(function (root) {
+	'use strict';
+
+	var FT3_PER_YD3 = 27;
+	var BAGS = [ { lb: 40, ft3: 0.30 }, { lb: 60, ft3: 0.45 }, { lb: 80, ft3: 0.60 } ];
+
+	function pos(x) {
+		x = typeof x === 'string' ? parseFloat(x) : x;
+		return isFinite(x) &amp;&amp; x &gt; 0 ? x : 0;
+	}
+
+	// Area in square feet (imperial) or square meters (metric).
+	function area(shape, d) {
+		switch (shape) {
+			case 'circle': return Math.PI * Math.pow(pos(d.diameter) / 2, 2);
+			case 'triangle': return pos(d.base) * pos(d.height) / 2;
+			case 'area': return pos(d.area);
+			default: return pos(d.length) * pos(d.width);
+		}
+	}
+
+	// Rounds up to a multiple of step; a small tolerance keeps exact multiples from rounding up on float error.
+	function roundUp(q, step) {
+		if (!(step &gt; 0)) return q;
+		return Math.ceil(q / step - 1e-9) * step;
+	}
+
+	/* One result. m = { soldBy, density, price, step, min, bags }, d = dimensions (strings or numbers).
+	 * Returns volume (yd3 or m3, with waste), weight (tons or tonnes, if density is set), qty (in the unit sold),
+	 * order (qty rounded up to the step and raised to the minimum), cost (order x price, or 0), and bags (concrete). */
+	function calc(opts) {
+		var metric = !!opts.metric, m = opts.material, d = opts.dims;
+		var a = area(opts.shape, d);
+		var depth = pos(d.depth);
+		var waste = 1 + pos(opts.waste) / 100;
+		var raw = metric ? a * depth / 100 : a * depth / 12 / FT3_PER_YD3;
+		var volume = raw * waste;
+		var weight = pos(m.density) ? volume * m.density : 0;
+		var byWeight = m.soldBy === 'weight' &amp;&amp; weight &gt; 0;
+		var qty = byWeight ? weight : volume;
+		var order = 0;
+		if (qty &gt; 0) {
+			order = Math.max(roundUp(qty, pos(m.step)), pos(m.min));
+		}
+		var ft3 = metric ? 0 : volume * FT3_PER_YD3;
+		var bags = m.bags &amp;&amp; ft3 &gt; 0 ? BAGS.map(function (b) {
+			return { lb: b.lb, count: Math.ceil(ft3 / b.ft3 - 1e-9) };
+		}) : [];
+		return {
+			area: a, volume: volume, weight: weight, byWeight: byWeight, qty: qty, order: order,
+			cost: pos(m.price) &amp;&amp; order ? order * m.price : 0, bags: bags,
+		};
+	}
+
+	// Plain number for display: up to 2 decimals, trailing zeros dropped (3.10 -&gt; 3.1, 4.00 -&gt; 4).
+	function num(x) {
+		var r = Math.round(x * 100) / 100;
+		return (r.toFixed(2)).replace(/\.?0+$/, '');
+	}
+	function money(cur, x) {
+		return cur + (Math.round(x * 100) / 100).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+	}
+	function fmt(s) {
+		var args = Array.prototype.slice.call(arguments, 1), i = 0;
+		return s.replace(/%(\d)\$s|%s|%%/g, function (all, n) {
+			if (all === '%%') return '%';
+			return String(n ? args[n - 1] : args[i++]);
+		});
+	}
+
+	// &quot;1 cubic yard&quot; / &quot;2.5 cubic yards&quot;: the singular string is used when the amount shows as exactly 1.
+	function amount(t, unit, x) {
+		var n = num(x);
+		return fmt(n === '1' &amp;&amp; t[unit + 'One'] ? t[unit + 'One'] : t[unit], n);
+	}
+
+	// Result text lines for one calculation (used by the page and by the tests).
+	function describe(cfg, key, r) {
+		var t = cfg.i18n, m = cfg.materials[key], metric = cfg.metric;
+		if (!(r.volume &gt; 0)) return [ t.empty ];
+		var vol = amount(t, metric ? 'm3' : 'yd3', r.volume);
+		var wt = r.weight ? amount(t, metric ? 'tonnes' : 'tons', r.weight) : '';
+		var lines = [];
+		if (r.byWeight) {
+			lines.push(fmt(t.needBoth, wt, vol));
+		} else {
+			lines.push(fmt(t.need, vol));
+			if (wt) lines.push(fmt(t.weighs, wt));
+		}
+		if (pos(cfg.waste)) lines.push(fmt(t.waste, num(cfg.waste)));
+		var unit = r.byWeight ? (metric ? 'tonnes' : 'tons') : (metric ? 'm3' : 'yd3');
+		if (r.order !== r.qty) {
+			var o = fmt(t.order, amount(t, unit, r.order));
+			if (pos(m.min) &amp;&amp; r.order === m.min &amp;&amp; roundUp(r.qty, pos(m.step)) &lt; m.min) {
+				o += ' ' + fmt(t.minNote, amount(t, unit, m.min));
+			} else if (pos(m.step)) {
+				o += ' ' + fmt(t.stepNote, num(m.step));
+			}
+			lines.push(o);
+		}
+		if (r.cost) {
+			var unitName = r.byWeight ? (metric ? t.unitT : t.unitTon) : (metric ? t.unitM3 : t.unitYd3);
+			lines.push(fmt(t.cost, money(cfg.currency, r.cost), money(cfg.currency, m.price), unitName));
+		}
+		if (r.bags.length) {
+			lines.push(t.bagsHead + ' ' + r.bags.map(function (b) { return fmt(t.bag, b.count, b.lb); }).join(', ') + '.');
+		}
+		return lines;
+	}
+
+	var FIELDS = { rect: [ 'length', 'width' ], circle: [ 'diameter' ], triangle: [ 'base', 'height' ], area: [ 'area' ] };
+
+	function setup(el) {
+		var cfg;
+		try { cfg = JSON.parse(el.getAttribute('data-pilequote')); } catch (e) { return; }
+		var form = el.querySelector('form'), out = el.querySelector('.pilequote-result');
+		// Look inputs up by name: form.elements.length is the element count, not the &quot;length&quot; field.
+		var input = function (name) { return form.querySelector('[name=&quot;' + name + '&quot;]'); };
+		var lastKey = input('material').value;
+
+		function update(ev) {
+			var key = input('material').value, shape = input('shape').value;
+			var depthInput = input('depth');
+			// A new material brings its usual depth, unless the visitor typed their own.
+			if (ev &amp;&amp; ev.target === input('material') &amp;&amp; key !== lastKey) {
+				if (!depthInput.value || pos(depthInput.value) === cfg.materials[lastKey].depth) {
+					depthInput.value = cfg.materials[key].depth ? String(cfg.materials[key].depth) : '';
+				}
+				lastKey = key;
+			}
+			Object.keys(FIELDS).forEach(function (s) {
+				FIELDS[s].forEach(function (f) {
+					var p = el.querySelector('[data-field=&quot;' + f + '&quot;]');
+					if (p) p.hidden = FIELDS[shape].indexOf(f) &lt; 0;
+				});
+			});
+			var dims = { depth: depthInput.value };
+			FIELDS[shape].forEach(function (f) { dims[f] = input(f).value; });
+			var r = calc({ metric: cfg.metric, material: cfg.materials[key], shape: shape, dims: dims, waste: cfg.waste });
+			out.textContent = '';
+			describe(cfg, key, r).forEach(function (line) {
+				var p = document.createElement('p');
+				p.textContent = line;
+				out.appendChild(p);
+			});
+		}
+		form.addEventListener('input', update);
+		form.addEventListener('change', update);
+		form.addEventListener('submit', function (e) { e.preventDefault(); update(); });
+		update();
+	}
+
+	var api = { area: area, calc: calc, describe: describe, num: num, money: money, fmt: fmt, roundUp: roundUp, BAGS: BAGS, setup: setup };
+	if (typeof module !== 'undefined' &amp;&amp; module.exports) {
+		module.exports = api;
+	} else {
+		root.PileQuote = api;
+		var start = function () {
+			var els = document.querySelectorAll('[data-pilequote]');
+			for (var i = 0; i &lt; els.length; i++) setup(els[i]);
+		};
+		if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+	}
+})(this);
+&lt;/script&gt;
+&lt;script&gt;(function(){var w=document.currentScript&amp;&amp;document.currentScript.parentNode;if(!w)return;var s=w.querySelector('.yq-where select');if(!s)return;s.addEventListener('change',function(){var b=w.querySelectorAll('[data-yq-col]');for(var i=0;i&lt;b.length;i++)b[i].hidden=b[i].getAttribute('data-yq-col')!==s.value;});})();&lt;/script&gt;
+&lt;/div&gt;
+</textarea>
+<p class="small">Prices change? Reply to my email with the new ones and I'll send updated code, free. Want extras like delivery by ZIP code or a quote form that emails you?
+I build custom versions for $90 (<a href="https://jamccormick.gumroad.com/l/custom-website-calculator">details</a>). No obligation either way.</p>
+</section>
+<section class="card">
+<!-- Material calculator for Cheaper Than Dirt Landscape Supply. Paste this whole block into an HTML / embed / code block. Runs in the visitor's browser; sends nothing anywhere. -->
+<div class="yq-calc">
+<p class="yq-where"><label for="yq-cheaper-than-dirt-where">Yard</label><select id="yq-cheaper-than-dirt-where"><option value="0">Belton</option><option value="1">Waco</option></select></p>
+<div class="pilequote" data-yq-col="0" data-pilequote="{&quot;metric&quot;:false,&quot;currency&quot;:&quot;$&quot;,&quot;waste&quot;:0,&quot;materials&quot;:{&quot;m1&quot;:{&quot;label&quot;:&quot;Black mulch&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:55,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m2&quot;:{&quot;label&quot;:&quot;Hardwood mulch&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:50,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m3&quot;:{&quot;label&quot;:&quot;Cedar mulch&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:45,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m4&quot;:{&quot;label&quot;:&quot;Sandy loam topsoil&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:35,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:4,&quot;bags&quot;:false},&quot;m5&quot;:{&quot;label&quot;:&quot;Chocolate loam&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:35,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:4,&quot;bags&quot;:false},&quot;m6&quot;:{&quot;label&quot;:&quot;Organic compost / garden mix&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:50,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;m7&quot;:{&quot;label&quot;:&quot;Spring Mix (sandy loam + garden mix)&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:50,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:4,&quot;bags&quot;:false},&quot;m8&quot;:{&quot;label&quot;:&quot;Cottonseed compost&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:40,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;m9&quot;:{&quot;label&quot;:&quot;Turkey manure compost&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:55,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;m10&quot;:{&quot;label&quot;:&quot;Pecan hull compost&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:40,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;m11&quot;:{&quot;label&quot;:&quot;Cow manure compost&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:70,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;m12&quot;:{&quot;label&quot;:&quot;Concrete sand / pool sand&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:45,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;m13&quot;:{&quot;label&quot;:&quot;Brick sand / mason sand&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:60,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;m14&quot;:{&quot;label&quot;:&quot;White mason sand&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:100,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;m15&quot;:{&quot;label&quot;:&quot;Crushed limestone 3/8\&quot; chip&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:50,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m16&quot;:{&quot;label&quot;:&quot;Crushed limestone 1\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:50,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m17&quot;:{&quot;label&quot;:&quot;Crushed limestone 2\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:50,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m18&quot;:{&quot;label&quot;:&quot;River rock 3/8\&quot; (pea gravel)&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:45,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m19&quot;:{&quot;label&quot;:&quot;River rock 1\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:45,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m20&quot;:{&quot;label&quot;:&quot;Brazos River rock 2\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:100,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m21&quot;:{&quot;label&quot;:&quot;Crushed granite&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:80,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m22&quot;:{&quot;label&quot;:&quot;Decomposed granite 1/2\&quot; minus&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:60,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m23&quot;:{&quot;label&quot;:&quot;Decomposed granite 1/4\&quot; minus&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:65,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m24&quot;:{&quot;label&quot;:&quot;Landscape rock 2\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:70,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m25&quot;:{&quot;label&quot;:&quot;Rainbow rock&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:110,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m26&quot;:{&quot;label&quot;:&quot;Austin rock&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:105,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m27&quot;:{&quot;label&quot;:&quot;Belton blend&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:105,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m28&quot;:{&quot;label&quot;:&quot;Sabine&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:120,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m29&quot;:{&quot;label&quot;:&quot;Black Star 5/8\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:175,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m30&quot;:{&quot;label&quot;:&quot;Black Star 1\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:175,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m31&quot;:{&quot;label&quot;:&quot;Black Star 2\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:185,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m32&quot;:{&quot;label&quot;:&quot;Peach cobble 1 x 3\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:100,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m33&quot;:{&quot;label&quot;:&quot;Peach cobble 2 x 4\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:105,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m34&quot;:{&quot;label&quot;:&quot;Road base&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:30,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:4,&quot;bags&quot;:false},&quot;m35&quot;:{&quot;label&quot;:&quot;Crusher fines&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:20,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:4,&quot;bags&quot;:false},&quot;m36&quot;:{&quot;label&quot;:&quot;Reclaimed asphalt&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:50,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:4,&quot;bags&quot;:false}},&quot;i18n&quot;:{&quot;yd3&quot;:&quot;%s cubic yards&quot;,&quot;m3&quot;:&quot;%s cubic meters&quot;,&quot;tons&quot;:&quot;%s tons&quot;,&quot;tonnes&quot;:&quot;%s tonnes&quot;,&quot;yd3One&quot;:&quot;%s cubic yard&quot;,&quot;m3One&quot;:&quot;%s cubic meter&quot;,&quot;tonsOne&quot;:&quot;%s ton&quot;,&quot;tonnesOne&quot;:&quot;%s tonne&quot;,&quot;need&quot;:&quot;You need about %s.&quot;,&quot;needBoth&quot;:&quot;You need about %1$s (%2$s).&quot;,&quot;weighs&quot;:&quot;That is about %s of material.&quot;,&quot;waste&quot;:&quot;Includes %s%% extra for waste and settling.&quot;,&quot;order&quot;:&quot;Order %s.&quot;,&quot;stepNote&quot;:&quot;(We sell in steps of %s.)&quot;,&quot;minNote&quot;:&quot;(Minimum order: %s.)&quot;,&quot;cost&quot;:&quot;Estimated cost: %1$s at %2$s per %3$s, before delivery and tax.&quot;,&quot;unitYd3&quot;:&quot;cubic yard&quot;,&quot;unitM3&quot;:&quot;cubic meter&quot;,&quot;unitTon&quot;:&quot;ton&quot;,&quot;unitT&quot;:&quot;tonne&quot;,&quot;bag&quot;:&quot;%1$s bags of %2$s lb premix&quot;,&quot;bagsHead&quot;:&quot;Or in bags:&quot;,&quot;empty&quot;:&quot;Enter the size of the area and the depth.&quot;}}">
+<form class="pilequote-form" novalidate>
+<p class="pilequote-field"><label for="yq-cheaper-than-dirt-1-material">Material</label>
+<select id="yq-cheaper-than-dirt-1-material" name="material">
+<optgroup label="Mulch">
+<option value="m1">Black mulch</option>
+<option value="m2">Hardwood mulch</option>
+<option value="m3">Cedar mulch</option>
+</optgroup>
+<optgroup label="Soil and compost">
+<option value="m4">Sandy loam topsoil</option>
+<option value="m5">Chocolate loam</option>
+<option value="m6">Organic compost / garden mix</option>
+<option value="m7">Spring Mix (sandy loam + garden mix)</option>
+<option value="m8">Cottonseed compost</option>
+<option value="m9">Turkey manure compost</option>
+<option value="m10">Pecan hull compost</option>
+<option value="m11">Cow manure compost</option>
+</optgroup>
+<optgroup label="Sand">
+<option value="m12">Concrete sand / pool sand</option>
+<option value="m13">Brick sand / mason sand</option>
+<option value="m14">White mason sand</option>
+</optgroup>
+<optgroup label="Rock and gravel">
+<option value="m15">Crushed limestone 3/8&quot; chip</option>
+<option value="m16">Crushed limestone 1&quot;</option>
+<option value="m17">Crushed limestone 2&quot;</option>
+<option value="m18">River rock 3/8&quot; (pea gravel)</option>
+<option value="m19">River rock 1&quot;</option>
+<option value="m20">Brazos River rock 2&quot;</option>
+<option value="m21">Crushed granite</option>
+<option value="m22">Decomposed granite 1/2&quot; minus</option>
+<option value="m23">Decomposed granite 1/4&quot; minus</option>
+<option value="m24">Landscape rock 2&quot;</option>
+<option value="m25">Rainbow rock</option>
+<option value="m26">Austin rock</option>
+<option value="m27">Belton blend</option>
+<option value="m28">Sabine</option>
+<option value="m29">Black Star 5/8&quot;</option>
+<option value="m30">Black Star 1&quot;</option>
+<option value="m31">Black Star 2&quot;</option>
+<option value="m32">Peach cobble 1 x 3&quot;</option>
+<option value="m33">Peach cobble 2 x 4&quot;</option>
+</optgroup>
+<optgroup label="Base">
+<option value="m34">Road base</option>
+<option value="m35">Crusher fines</option>
+<option value="m36">Reclaimed asphalt</option>
+</optgroup>
+</select></p>
+<p class="pilequote-field"><label for="yq-cheaper-than-dirt-1-shape">Shape of the area</label>
+<select id="yq-cheaper-than-dirt-1-shape" name="shape">
+<option value="rect">Rectangle</option>
+<option value="circle">Circle</option>
+<option value="triangle">Triangle</option>
+<option value="area">I know the area</option>
+</select></p>
+<p class="pilequote-field" data-field="length"><label for="yq-cheaper-than-dirt-1-length">Length <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="yq-cheaper-than-dirt-1-length" name="length" value=""></p><p class="pilequote-field" data-field="width"><label for="yq-cheaper-than-dirt-1-width">Width <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="yq-cheaper-than-dirt-1-width" name="width" value=""></p><p class="pilequote-field" data-field="diameter"><label for="yq-cheaper-than-dirt-1-diameter">Diameter <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="yq-cheaper-than-dirt-1-diameter" name="diameter" value=""></p><p class="pilequote-field" data-field="base"><label for="yq-cheaper-than-dirt-1-base">Base <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="yq-cheaper-than-dirt-1-base" name="base" value=""></p><p class="pilequote-field" data-field="height"><label for="yq-cheaper-than-dirt-1-height">Height (base to tip) <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="yq-cheaper-than-dirt-1-height" name="height" value=""></p><p class="pilequote-field" data-field="area"><label for="yq-cheaper-than-dirt-1-area">Area <span class="pilequote-unit">(sq ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="yq-cheaper-than-dirt-1-area" name="area" value=""></p><p class="pilequote-field" data-field="depth"><label for="yq-cheaper-than-dirt-1-depth">Depth <span class="pilequote-unit">(in)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="yq-cheaper-than-dirt-1-depth" name="depth" value="3"></p>
+</form>
+<div class="pilequote-result" aria-live="polite"><p>Enter the size of the area and the depth.</p></div>
+<p class="pilequote-quote"><a class="yq-button" href="tel:+12545345279">Call to order: (254) 534-5279</a></p>
+<noscript><p>This calculator needs JavaScript.</p></noscript>
+</div>
+<div class="pilequote" data-yq-col="1" hidden data-pilequote="{&quot;metric&quot;:false,&quot;currency&quot;:&quot;$&quot;,&quot;waste&quot;:0,&quot;materials&quot;:{&quot;m1&quot;:{&quot;label&quot;:&quot;Black mulch&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:60,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m2&quot;:{&quot;label&quot;:&quot;Hardwood mulch&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:55,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m3&quot;:{&quot;label&quot;:&quot;Cedar mulch&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:45,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m4&quot;:{&quot;label&quot;:&quot;Sandy loam topsoil&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:30,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:4,&quot;bags&quot;:false},&quot;m5&quot;:{&quot;label&quot;:&quot;Chocolate loam&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:35,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:4,&quot;bags&quot;:false},&quot;m6&quot;:{&quot;label&quot;:&quot;Organic compost / garden mix&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:50,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;m7&quot;:{&quot;label&quot;:&quot;Spring Mix (sandy loam + garden mix)&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:50,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:4,&quot;bags&quot;:false},&quot;m8&quot;:{&quot;label&quot;:&quot;Cottonseed compost&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:40,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;m9&quot;:{&quot;label&quot;:&quot;Turkey manure compost&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:55,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;m10&quot;:{&quot;label&quot;:&quot;Pecan hull compost&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:40,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;m11&quot;:{&quot;label&quot;:&quot;Cow manure compost&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:70,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;m12&quot;:{&quot;label&quot;:&quot;Concrete sand / pool sand&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:45,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;m13&quot;:{&quot;label&quot;:&quot;Brick sand / mason sand&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:60,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;m14&quot;:{&quot;label&quot;:&quot;White mason sand&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:115,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:2,&quot;bags&quot;:false},&quot;m15&quot;:{&quot;label&quot;:&quot;Crushed limestone 3/8\&quot; chip&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:55,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m16&quot;:{&quot;label&quot;:&quot;Crushed limestone 1\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:55,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m17&quot;:{&quot;label&quot;:&quot;Crushed limestone 2\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:50,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m18&quot;:{&quot;label&quot;:&quot;River rock 3/8\&quot; (pea gravel)&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:45,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m19&quot;:{&quot;label&quot;:&quot;River rock 1\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:45,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m20&quot;:{&quot;label&quot;:&quot;Brazos River rock 2\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:70,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m21&quot;:{&quot;label&quot;:&quot;Crushed granite&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:80,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m22&quot;:{&quot;label&quot;:&quot;Decomposed granite 1/2\&quot; minus&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:60,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m23&quot;:{&quot;label&quot;:&quot;Decomposed granite 1/4\&quot; minus&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:65,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m24&quot;:{&quot;label&quot;:&quot;Landscape rock 2\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:70,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m25&quot;:{&quot;label&quot;:&quot;Rainbow rock&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:110,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m26&quot;:{&quot;label&quot;:&quot;Austin rock&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:110,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m27&quot;:{&quot;label&quot;:&quot;Belton blend&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:125,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m28&quot;:{&quot;label&quot;:&quot;Sabine&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:170,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m29&quot;:{&quot;label&quot;:&quot;Black Star 5/8\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:185,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m30&quot;:{&quot;label&quot;:&quot;Black Star 1\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:185,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m31&quot;:{&quot;label&quot;:&quot;Black Star 2\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:185,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m32&quot;:{&quot;label&quot;:&quot;Peach cobble 1 x 3\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:125,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m33&quot;:{&quot;label&quot;:&quot;Peach cobble 2 x 4\&quot;&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:125,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:3,&quot;bags&quot;:false},&quot;m34&quot;:{&quot;label&quot;:&quot;Road base&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:35,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:4,&quot;bags&quot;:false},&quot;m35&quot;:{&quot;label&quot;:&quot;Crusher fines&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:30,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:4,&quot;bags&quot;:false},&quot;m36&quot;:{&quot;label&quot;:&quot;Reclaimed asphalt&quot;,&quot;soldBy&quot;:&quot;volume&quot;,&quot;density&quot;:0,&quot;price&quot;:50,&quot;step&quot;:0,&quot;min&quot;:0,&quot;depth&quot;:4,&quot;bags&quot;:false}},&quot;i18n&quot;:{&quot;yd3&quot;:&quot;%s cubic yards&quot;,&quot;m3&quot;:&quot;%s cubic meters&quot;,&quot;tons&quot;:&quot;%s tons&quot;,&quot;tonnes&quot;:&quot;%s tonnes&quot;,&quot;yd3One&quot;:&quot;%s cubic yard&quot;,&quot;m3One&quot;:&quot;%s cubic meter&quot;,&quot;tonsOne&quot;:&quot;%s ton&quot;,&quot;tonnesOne&quot;:&quot;%s tonne&quot;,&quot;need&quot;:&quot;You need about %s.&quot;,&quot;needBoth&quot;:&quot;You need about %1$s (%2$s).&quot;,&quot;weighs&quot;:&quot;That is about %s of material.&quot;,&quot;waste&quot;:&quot;Includes %s%% extra for waste and settling.&quot;,&quot;order&quot;:&quot;Order %s.&quot;,&quot;stepNote&quot;:&quot;(We sell in steps of %s.)&quot;,&quot;minNote&quot;:&quot;(Minimum order: %s.)&quot;,&quot;cost&quot;:&quot;Estimated cost: %1$s at %2$s per %3$s, before delivery and tax.&quot;,&quot;unitYd3&quot;:&quot;cubic yard&quot;,&quot;unitM3&quot;:&quot;cubic meter&quot;,&quot;unitTon&quot;:&quot;ton&quot;,&quot;unitT&quot;:&quot;tonne&quot;,&quot;bag&quot;:&quot;%1$s bags of %2$s lb premix&quot;,&quot;bagsHead&quot;:&quot;Or in bags:&quot;,&quot;empty&quot;:&quot;Enter the size of the area and the depth.&quot;}}">
+<form class="pilequote-form" novalidate>
+<p class="pilequote-field"><label for="yq-cheaper-than-dirt-2-material">Material</label>
+<select id="yq-cheaper-than-dirt-2-material" name="material">
+<optgroup label="Mulch">
+<option value="m1">Black mulch</option>
+<option value="m2">Hardwood mulch</option>
+<option value="m3">Cedar mulch</option>
+</optgroup>
+<optgroup label="Soil and compost">
+<option value="m4">Sandy loam topsoil</option>
+<option value="m5">Chocolate loam</option>
+<option value="m6">Organic compost / garden mix</option>
+<option value="m7">Spring Mix (sandy loam + garden mix)</option>
+<option value="m8">Cottonseed compost</option>
+<option value="m9">Turkey manure compost</option>
+<option value="m10">Pecan hull compost</option>
+<option value="m11">Cow manure compost</option>
+</optgroup>
+<optgroup label="Sand">
+<option value="m12">Concrete sand / pool sand</option>
+<option value="m13">Brick sand / mason sand</option>
+<option value="m14">White mason sand</option>
+</optgroup>
+<optgroup label="Rock and gravel">
+<option value="m15">Crushed limestone 3/8&quot; chip</option>
+<option value="m16">Crushed limestone 1&quot;</option>
+<option value="m17">Crushed limestone 2&quot;</option>
+<option value="m18">River rock 3/8&quot; (pea gravel)</option>
+<option value="m19">River rock 1&quot;</option>
+<option value="m20">Brazos River rock 2&quot;</option>
+<option value="m21">Crushed granite</option>
+<option value="m22">Decomposed granite 1/2&quot; minus</option>
+<option value="m23">Decomposed granite 1/4&quot; minus</option>
+<option value="m24">Landscape rock 2&quot;</option>
+<option value="m25">Rainbow rock</option>
+<option value="m26">Austin rock</option>
+<option value="m27">Belton blend</option>
+<option value="m28">Sabine</option>
+<option value="m29">Black Star 5/8&quot;</option>
+<option value="m30">Black Star 1&quot;</option>
+<option value="m31">Black Star 2&quot;</option>
+<option value="m32">Peach cobble 1 x 3&quot;</option>
+<option value="m33">Peach cobble 2 x 4&quot;</option>
+</optgroup>
+<optgroup label="Base">
+<option value="m34">Road base</option>
+<option value="m35">Crusher fines</option>
+<option value="m36">Reclaimed asphalt</option>
+</optgroup>
+</select></p>
+<p class="pilequote-field"><label for="yq-cheaper-than-dirt-2-shape">Shape of the area</label>
+<select id="yq-cheaper-than-dirt-2-shape" name="shape">
+<option value="rect">Rectangle</option>
+<option value="circle">Circle</option>
+<option value="triangle">Triangle</option>
+<option value="area">I know the area</option>
+</select></p>
+<p class="pilequote-field" data-field="length"><label for="yq-cheaper-than-dirt-2-length">Length <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="yq-cheaper-than-dirt-2-length" name="length" value=""></p><p class="pilequote-field" data-field="width"><label for="yq-cheaper-than-dirt-2-width">Width <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="yq-cheaper-than-dirt-2-width" name="width" value=""></p><p class="pilequote-field" data-field="diameter"><label for="yq-cheaper-than-dirt-2-diameter">Diameter <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="yq-cheaper-than-dirt-2-diameter" name="diameter" value=""></p><p class="pilequote-field" data-field="base"><label for="yq-cheaper-than-dirt-2-base">Base <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="yq-cheaper-than-dirt-2-base" name="base" value=""></p><p class="pilequote-field" data-field="height"><label for="yq-cheaper-than-dirt-2-height">Height (base to tip) <span class="pilequote-unit">(ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="yq-cheaper-than-dirt-2-height" name="height" value=""></p><p class="pilequote-field" data-field="area"><label for="yq-cheaper-than-dirt-2-area">Area <span class="pilequote-unit">(sq ft)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="yq-cheaper-than-dirt-2-area" name="area" value=""></p><p class="pilequote-field" data-field="depth"><label for="yq-cheaper-than-dirt-2-depth">Depth <span class="pilequote-unit">(in)</span></label> <input type="number" inputmode="decimal" min="0" step="any" id="yq-cheaper-than-dirt-2-depth" name="depth" value="3"></p>
+</form>
+<div class="pilequote-result" aria-live="polite"><p>Enter the size of the area and the depth.</p></div>
+<p class="pilequote-quote"><a class="yq-button" href="tel:+12545345279">Call to order: (254) 534-5279</a></p>
+<noscript><p>This calculator needs JavaScript.</p></noscript>
+</div>
+<p class="yq-note">Delivery is quoted by distance and amount (typically 1 to 2 cubic yards minimum), so the estimate is for material only.</p>
+<style>
+/* PileQuote Material Calculator: minimal styles that inherit the theme's fonts and colors. */
+.pilequote { max-width: 32rem; margin: 1.5em 0; padding: 1em 1.25em; border: 1px solid currentColor; border-radius: 6px; }
+.pilequote-form { margin: 0; }
+.pilequote-field { margin: 0 0 0.75em; }
+.pilequote-field label { display: block; font-weight: 600; margin-bottom: 0.25em; }
+.pilequote-unit { font-weight: 400; }
+.pilequote-field input, .pilequote-field select { width: 100%; max-width: 16rem; box-sizing: border-box; font: inherit; padding: 0.4em; }
+.pilequote-field[hidden] { display: none; }
+.pilequote-title { font-weight: 700; font-size: 1.1em; margin: 0 0 0.75em; }
+.pilequote-result { margin-top: 1em; padding-top: 0.75em; border-top: 1px solid currentColor; }
+.pilequote-result p { margin: 0 0 0.4em; }
+.pilequote-result p:first-child { font-weight: 700; font-size: 1.1em; }
+.pilequote-quote { margin: 1em 0 0; }
+.yq-calc{font:inherit;color:inherit}
+.yq-calc .pilequote{margin:0}
+.yq-calc .pilequote[hidden]{display:none}
+.yq-where{margin:0 0 .75em}.yq-where label{display:block;font-weight:600;margin-bottom:.25em}
+.yq-where select{font:inherit;padding:.4em;width:100%;max-width:16rem}
+.yq-button{display:inline-block;padding:.55em 1em;border-radius:5px;background:#2f6b3a;color:#fff!important;text-decoration:none;font-weight:600}
+.yq-note{font-size:.9em;margin:.75em 0 0;opacity:.85}
+</style>
+<script>
+/* PileQuote Material Calculator: math and form wiring. Runs only in the visitor's browser; sends nothing anywhere.
+ * Imperial: lengths in feet, depth in inches, volume in cubic yards (27 cu ft), weight in short tons.
+ * Metric: lengths in meters, depth in centimeters, volume in cubic meters, weight in tonnes.
+ * Concrete bag yields: QUIKRETE Concrete Mix (No. 1101) data sheet (40 lb 0.30, 60 lb 0.45, 80 lb 0.60 cu ft). */
+(function (root) {
+	'use strict';
+
+	var FT3_PER_YD3 = 27;
+	var BAGS = [ { lb: 40, ft3: 0.30 }, { lb: 60, ft3: 0.45 }, { lb: 80, ft3: 0.60 } ];
+
+	function pos(x) {
+		x = typeof x === 'string' ? parseFloat(x) : x;
+		return isFinite(x) && x > 0 ? x : 0;
+	}
+
+	// Area in square feet (imperial) or square meters (metric).
+	function area(shape, d) {
+		switch (shape) {
+			case 'circle': return Math.PI * Math.pow(pos(d.diameter) / 2, 2);
+			case 'triangle': return pos(d.base) * pos(d.height) / 2;
+			case 'area': return pos(d.area);
+			default: return pos(d.length) * pos(d.width);
+		}
+	}
+
+	// Rounds up to a multiple of step; a small tolerance keeps exact multiples from rounding up on float error.
+	function roundUp(q, step) {
+		if (!(step > 0)) return q;
+		return Math.ceil(q / step - 1e-9) * step;
+	}
+
+	/* One result. m = { soldBy, density, price, step, min, bags }, d = dimensions (strings or numbers).
+	 * Returns volume (yd3 or m3, with waste), weight (tons or tonnes, if density is set), qty (in the unit sold),
+	 * order (qty rounded up to the step and raised to the minimum), cost (order x price, or 0), and bags (concrete). */
+	function calc(opts) {
+		var metric = !!opts.metric, m = opts.material, d = opts.dims;
+		var a = area(opts.shape, d);
+		var depth = pos(d.depth);
+		var waste = 1 + pos(opts.waste) / 100;
+		var raw = metric ? a * depth / 100 : a * depth / 12 / FT3_PER_YD3;
+		var volume = raw * waste;
+		var weight = pos(m.density) ? volume * m.density : 0;
+		var byWeight = m.soldBy === 'weight' && weight > 0;
+		var qty = byWeight ? weight : volume;
+		var order = 0;
+		if (qty > 0) {
+			order = Math.max(roundUp(qty, pos(m.step)), pos(m.min));
+		}
+		var ft3 = metric ? 0 : volume * FT3_PER_YD3;
+		var bags = m.bags && ft3 > 0 ? BAGS.map(function (b) {
+			return { lb: b.lb, count: Math.ceil(ft3 / b.ft3 - 1e-9) };
+		}) : [];
+		return {
+			area: a, volume: volume, weight: weight, byWeight: byWeight, qty: qty, order: order,
+			cost: pos(m.price) && order ? order * m.price : 0, bags: bags,
+		};
+	}
+
+	// Plain number for display: up to 2 decimals, trailing zeros dropped (3.10 -> 3.1, 4.00 -> 4).
+	function num(x) {
+		var r = Math.round(x * 100) / 100;
+		return (r.toFixed(2)).replace(/\.?0+$/, '');
+	}
+	function money(cur, x) {
+		return cur + (Math.round(x * 100) / 100).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+	}
+	function fmt(s) {
+		var args = Array.prototype.slice.call(arguments, 1), i = 0;
+		return s.replace(/%(\d)\$s|%s|%%/g, function (all, n) {
+			if (all === '%%') return '%';
+			return String(n ? args[n - 1] : args[i++]);
+		});
+	}
+
+	// "1 cubic yard" / "2.5 cubic yards": the singular string is used when the amount shows as exactly 1.
+	function amount(t, unit, x) {
+		var n = num(x);
+		return fmt(n === '1' && t[unit + 'One'] ? t[unit + 'One'] : t[unit], n);
+	}
+
+	// Result text lines for one calculation (used by the page and by the tests).
+	function describe(cfg, key, r) {
+		var t = cfg.i18n, m = cfg.materials[key], metric = cfg.metric;
+		if (!(r.volume > 0)) return [ t.empty ];
+		var vol = amount(t, metric ? 'm3' : 'yd3', r.volume);
+		var wt = r.weight ? amount(t, metric ? 'tonnes' : 'tons', r.weight) : '';
+		var lines = [];
+		if (r.byWeight) {
+			lines.push(fmt(t.needBoth, wt, vol));
+		} else {
+			lines.push(fmt(t.need, vol));
+			if (wt) lines.push(fmt(t.weighs, wt));
+		}
+		if (pos(cfg.waste)) lines.push(fmt(t.waste, num(cfg.waste)));
+		var unit = r.byWeight ? (metric ? 'tonnes' : 'tons') : (metric ? 'm3' : 'yd3');
+		if (r.order !== r.qty) {
+			var o = fmt(t.order, amount(t, unit, r.order));
+			if (pos(m.min) && r.order === m.min && roundUp(r.qty, pos(m.step)) < m.min) {
+				o += ' ' + fmt(t.minNote, amount(t, unit, m.min));
+			} else if (pos(m.step)) {
+				o += ' ' + fmt(t.stepNote, num(m.step));
+			}
+			lines.push(o);
+		}
+		if (r.cost) {
+			var unitName = r.byWeight ? (metric ? t.unitT : t.unitTon) : (metric ? t.unitM3 : t.unitYd3);
+			lines.push(fmt(t.cost, money(cfg.currency, r.cost), money(cfg.currency, m.price), unitName));
+		}
+		if (r.bags.length) {
+			lines.push(t.bagsHead + ' ' + r.bags.map(function (b) { return fmt(t.bag, b.count, b.lb); }).join(', ') + '.');
+		}
+		return lines;
+	}
+
+	var FIELDS = { rect: [ 'length', 'width' ], circle: [ 'diameter' ], triangle: [ 'base', 'height' ], area: [ 'area' ] };
+
+	function setup(el) {
+		var cfg;
+		try { cfg = JSON.parse(el.getAttribute('data-pilequote')); } catch (e) { return; }
+		var form = el.querySelector('form'), out = el.querySelector('.pilequote-result');
+		// Look inputs up by name: form.elements.length is the element count, not the "length" field.
+		var input = function (name) { return form.querySelector('[name="' + name + '"]'); };
+		var lastKey = input('material').value;
+
+		function update(ev) {
+			var key = input('material').value, shape = input('shape').value;
+			var depthInput = input('depth');
+			// A new material brings its usual depth, unless the visitor typed their own.
+			if (ev && ev.target === input('material') && key !== lastKey) {
+				if (!depthInput.value || pos(depthInput.value) === cfg.materials[lastKey].depth) {
+					depthInput.value = cfg.materials[key].depth ? String(cfg.materials[key].depth) : '';
+				}
+				lastKey = key;
+			}
+			Object.keys(FIELDS).forEach(function (s) {
+				FIELDS[s].forEach(function (f) {
+					var p = el.querySelector('[data-field="' + f + '"]');
+					if (p) p.hidden = FIELDS[shape].indexOf(f) < 0;
+				});
+			});
+			var dims = { depth: depthInput.value };
+			FIELDS[shape].forEach(function (f) { dims[f] = input(f).value; });
+			var r = calc({ metric: cfg.metric, material: cfg.materials[key], shape: shape, dims: dims, waste: cfg.waste });
+			out.textContent = '';
+			describe(cfg, key, r).forEach(function (line) {
+				var p = document.createElement('p');
+				p.textContent = line;
+				out.appendChild(p);
+			});
+		}
+		form.addEventListener('input', update);
+		form.addEventListener('change', update);
+		form.addEventListener('submit', function (e) { e.preventDefault(); update(); });
+		update();
+	}
+
+	var api = { area: area, calc: calc, describe: describe, num: num, money: money, fmt: fmt, roundUp: roundUp, BAGS: BAGS, setup: setup };
+	if (typeof module !== 'undefined' && module.exports) {
+		module.exports = api;
+	} else {
+		root.PileQuote = api;
+		var start = function () {
+			var els = document.querySelectorAll('[data-pilequote]');
+			for (var i = 0; i < els.length; i++) setup(els[i]);
+		};
+		if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+	}
+})(this);
+</script>
+<script>(function(){var w=document.currentScript&&document.currentScript.parentNode;if(!w)return;var s=w.querySelector('.yq-where select');if(!s)return;s.addEventListener('change',function(){var b=w.querySelectorAll('[data-yq-col]');for(var i=0;i<b.length;i++)b[i].hidden=b[i].getAttribute('data-yq-col')!==s.value;});})();</script>
+</div>
+
+</section>
+</div>
+<h2>Prices used in this sample</h2>
+<table><thead><tr><th>Material</th><th>Belton</th><th>Waco</th><th>Starting depth</th></tr></thead><tbody>
+<tr><td>Black mulch</td><td>$55.00</td><td>$60.00</td><td>3 in</td></tr>
+<tr><td>Hardwood mulch</td><td>$50.00</td><td>$55.00</td><td>3 in</td></tr>
+<tr><td>Cedar mulch</td><td>$45.00</td><td>$45.00</td><td>3 in</td></tr>
+<tr><td>Sandy loam topsoil</td><td>$35.00</td><td>$30.00</td><td>4 in</td></tr>
+<tr><td>Chocolate loam</td><td>$35.00</td><td>$35.00</td><td>4 in</td></tr>
+<tr><td>Organic compost / garden mix</td><td>$50.00</td><td>$50.00</td><td>2 in</td></tr>
+<tr><td>Spring Mix (sandy loam + garden mix)</td><td>$50.00</td><td>$50.00</td><td>4 in</td></tr>
+<tr><td>Cottonseed compost</td><td>$40.00</td><td>$40.00</td><td>2 in</td></tr>
+<tr><td>Turkey manure compost</td><td>$55.00</td><td>$55.00</td><td>2 in</td></tr>
+<tr><td>Pecan hull compost</td><td>$40.00</td><td>$40.00</td><td>2 in</td></tr>
+<tr><td>Cow manure compost</td><td>$70.00</td><td>$70.00</td><td>2 in</td></tr>
+<tr><td>Concrete sand / pool sand</td><td>$45.00</td><td>$45.00</td><td>2 in</td></tr>
+<tr><td>Brick sand / mason sand</td><td>$60.00</td><td>$60.00</td><td>2 in</td></tr>
+<tr><td>White mason sand</td><td>$100.00</td><td>$115.00</td><td>2 in</td></tr>
+<tr><td>Crushed limestone 3/8&quot; chip</td><td>$50.00</td><td>$55.00</td><td>3 in</td></tr>
+<tr><td>Crushed limestone 1&quot;</td><td>$50.00</td><td>$55.00</td><td>3 in</td></tr>
+<tr><td>Crushed limestone 2&quot;</td><td>$50.00</td><td>$50.00</td><td>3 in</td></tr>
+<tr><td>River rock 3/8&quot; (pea gravel)</td><td>$45.00</td><td>$45.00</td><td>3 in</td></tr>
+<tr><td>River rock 1&quot;</td><td>$45.00</td><td>$45.00</td><td>3 in</td></tr>
+<tr><td>Brazos River rock 2&quot;</td><td>$100.00</td><td>$70.00</td><td>3 in</td></tr>
+<tr><td>Crushed granite</td><td>$80.00</td><td>$80.00</td><td>3 in</td></tr>
+<tr><td>Decomposed granite 1/2&quot; minus</td><td>$60.00</td><td>$60.00</td><td>3 in</td></tr>
+<tr><td>Decomposed granite 1/4&quot; minus</td><td>$65.00</td><td>$65.00</td><td>3 in</td></tr>
+<tr><td>Landscape rock 2&quot;</td><td>$70.00</td><td>$70.00</td><td>3 in</td></tr>
+<tr><td>Rainbow rock</td><td>$110.00</td><td>$110.00</td><td>3 in</td></tr>
+<tr><td>Austin rock</td><td>$105.00</td><td>$110.00</td><td>3 in</td></tr>
+<tr><td>Belton blend</td><td>$105.00</td><td>$125.00</td><td>3 in</td></tr>
+<tr><td>Sabine</td><td>$120.00</td><td>$170.00</td><td>3 in</td></tr>
+<tr><td>Black Star 5/8&quot;</td><td>$175.00</td><td>$185.00</td><td>3 in</td></tr>
+<tr><td>Black Star 1&quot;</td><td>$175.00</td><td>$185.00</td><td>3 in</td></tr>
+<tr><td>Black Star 2&quot;</td><td>$185.00</td><td>$185.00</td><td>3 in</td></tr>
+<tr><td>Peach cobble 1 x 3&quot;</td><td>$100.00</td><td>$125.00</td><td>3 in</td></tr>
+<tr><td>Peach cobble 2 x 4&quot;</td><td>$105.00</td><td>$125.00</td><td>3 in</td></tr>
+<tr><td>Road base</td><td>$30.00</td><td>$35.00</td><td>4 in</td></tr>
+<tr><td>Crusher fines</td><td>$20.00</td><td>$30.00</td><td>4 in</td></tr>
+<tr><td>Reclaimed asphalt</td><td>$50.00</td><td>$50.00</td><td>4 in</td></tr>
+</tbody></table>
+<p class="small">Amounts are area x depth, converted to cubic yards (27 cubic feet each), with no extra added for settling. Copied from <a href="https://cheaperthandirtlandscapesupply.com/pricing">https://cheaperthandirtlandscapesupply.com/pricing</a> on 2026-11-18.</p>
+</main>
+<script>
+document.getElementById('copy').addEventListener('click', function () {
+  var t = document.getElementById('code'); t.select();
+  var done = function () { document.getElementById('copied').textContent = 'Copied.'; };
+  if (navigator.clipboard) navigator.clipboard.writeText(t.value).then(done, function () { document.execCommand('copy'); done(); });
+  else { document.execCommand('copy'); done(); }
+});
+</script>
+</body>
+</html>
