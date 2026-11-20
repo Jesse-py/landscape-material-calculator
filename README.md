@@ -4,7 +4,8 @@ A free WordPress plugin for landscape supply yards, garden centers, and contract
 the depth; the calculator shows how much mulch, topsoil, compost, gravel, sand, or concrete to order, rounded the way you sell
 it, with your price and a button to your quote page.
 
-**Live demo and download:** https://jesse-py.github.io/landscape-material-calculator/
+**Install from WordPress.org:** https://wordpress.org/plugins/pilequote-material-calculator/ (or search "PileQuote" in Plugins > Add New Plugin)
+**Live demo:** https://jesse-py.github.io/landscape-material-calculator/
 **Try it in a throwaway WordPress site (WordPress Playground):**
 https://playground.wordpress.net/?blueprint-url=https://jesse-py.github.io/landscape-material-calculator/blueprint.json
 
