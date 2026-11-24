@@ -5,9 +5,9 @@ the depth; the calculator shows how much mulch, topsoil, compost, gravel, sand, 
 it, with your price and a button to your quote page.
 
 **Install from WordPress.org:** https://wordpress.org/plugins/pilequote-material-calculator/ (or search "PileQuote" in Plugins > Add New Plugin)
-**Live demo:** https://jesse-py.github.io/landscape-material-calculator/
+**Live demo:** https://simpletoolshop.com/landscape-material-calculator/
 **Try it in a throwaway WordPress site (WordPress Playground):**
-https://playground.wordpress.net/?blueprint-url=https://jesse-py.github.io/landscape-material-calculator/blueprint.json
+https://playground.wordpress.net/?blueprint-url=https://simpletoolshop.com/landscape-material-calculator/blueprint.json
 
 ## Features
 - Six materials; rename or hide them, or show one material on its own page.

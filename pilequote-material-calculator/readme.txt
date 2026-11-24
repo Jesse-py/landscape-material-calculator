@@ -43,7 +43,7 @@ Results are estimates for planning an order. Compaction, moisture, and uneven gr
 percentage setting is there for you to cover it.
 
 The calculator code is tested against hand-worked examples and against the engine behind the free
-[DIY Project Calculators](https://jesse-py.github.io/diy-project-calculators/) site.
+[DIY Project Calculators](https://simpletoolshop.com/diy-project-calculators/) site.
 
 == Installation ==
 
